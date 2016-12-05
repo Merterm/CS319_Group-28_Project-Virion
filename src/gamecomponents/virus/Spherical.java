@@ -1,4 +1,4 @@
-package gamecomponents;
+package gamecomponents.virus;
 
 /**
  * CS319: Object-Oriented Software Engineering Course Project
@@ -7,5 +7,5 @@ package gamecomponents;
  * Version: 1.0
  * Description:
  */
-public class Ribosome {
+public class Spherical {
 }
