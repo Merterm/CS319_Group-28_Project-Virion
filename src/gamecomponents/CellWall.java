@@ -7,5 +7,31 @@ package gamecomponents;
  * Version: 1.0
  * Description:
  */
-public class CellWall {
+public class CellWall
+{
+    int duration, extraCM, createdTime;
+    public int getDuration()
+    {
+        return duration;
+    }
+
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+
+    public int getExtraCM() {
+        return extraCM;
+    }
+
+    public void setExtraCM(int extraCM) {
+        this.extraCM = extraCM;
+    }
+
+    public int getCreatedTime() {
+        return createdTime;
+    }
+
+    public void setCreatedTime(int createdTime) {
+        this.createdTime = createdTime;
+    }
 }

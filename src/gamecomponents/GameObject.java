@@ -7,10 +7,16 @@ package gamecomponents;
  * Version: 1.0
  * Description:
  */
-public class GameObject {
-    protected int PositionX, PositionY;
+public class GameObject
+{
+    public GameObject()
+    {
 
-    public void setPositionX(int x)
+    }
+
+    protected int PositionX, PositionY, radius;
+
+    public void setPositionX(int positionX)
     {
         PositionX = x;
     }
@@ -25,6 +31,12 @@ public class GameObject {
 
     public int getPositionY() {
         return PositionY;
+    }
+
+    public boolean goToPostion(int x,int y)
+    {
+        this.setPositionY(y+radius);        //for now
+        this.setPositionX(x+radius);
     }
 
     public boolean destroy()

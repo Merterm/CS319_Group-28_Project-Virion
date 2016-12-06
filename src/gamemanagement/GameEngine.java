@@ -1,5 +1,9 @@
 package gamemanagement;
 
+import gamecomponents.protein.Protein;
+import gamecomponents.virus.ViralDNA;
+import gamecomponents.virus.Virus;
+
 import java.util.Vector;
 
 /**
@@ -11,11 +15,26 @@ import java.util.Vector;
  */
 public class GameEngine
 {
-    public Vector virusList;
+    /*NOTE: there are separate lists(vector) for viruses,proteins,etc.
+     * ID of an object can be index of the list */
+
+    protected int viralDNACapacity = 100;   //for now 100
+    protected Vector<Virus> virusList;
 
     {
-        virusList = new Vector(2, 2);
+        virusList = new Vector<Virus>(2, 2);
     }
 
+    protected Vector<ViralDNA> viralDNAList;
+
+    {
+        viralDNAList = new Vector<ViralDNA>(2,2);
+    }
+
+    protected Vector<Protein> proteinList;
+
+    {
+        proteinList = new Vector<Protein>(2,2);
+    }
 
 }

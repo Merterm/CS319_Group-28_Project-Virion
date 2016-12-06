@@ -1,5 +1,7 @@
 package gamecomponents.protein;
 
+import gamecomponents.GameObject;
+
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
@@ -7,5 +9,16 @@ package gamecomponents.protein;
  * Version: 1.0
  * Description:
  */
-public class Protein {
+public class Protein extends GameObject
+{
+    protected int extraCM;
+
+    public int getExtraCM()
+    {
+        return extraCM;
+    }
+
+    public void setExtraCM(int extraCM) {
+        this.extraCM = extraCM;
+    }
 }
