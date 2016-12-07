@@ -18,6 +18,8 @@ import java.util.Vector;
  */
 public class CellController
 {
+    private int viralDNACapacity = 0;
+
     /*changed from virus to viralDNA & added parameter*/
     public boolean isViralDNACapacityReached(int currentCapacity)
     {
@@ -59,7 +61,7 @@ public class CellController
 
     public void attackVirus(Vector<Protein> proteins, int viralID)
     {
-        ViralDNA toBeAttacked = viralDNAList.get(viralID);
+        /*ViralDNA toBeAttacked = viralDNAList.get(viralID);
         int x = toBeAttacked.getPositionX();
         int y = toBeAttacked.getPositionY();
         Iterator i = proteins.iterator();
@@ -67,7 +69,7 @@ public class CellController
         {
             Protein p = (Protein) i.next();                             //casted to Protein
             p.goToPostion(x,y);
-        }
+        }*/
     }
     /*
     public void getMegaOut(id)

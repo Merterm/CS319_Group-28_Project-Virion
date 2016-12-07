@@ -38,10 +38,10 @@ public class VirusController
 
     public int[] getVirusPosition(int id)
     {
-        Virus v = virusList.get(id);        /* here's sth is wrong, doesn't recognize virusList */
+        //Virus v = virusList.get(id);        /* here's sth is wrong, doesn't recognize virusList */
         int[] list = new int[2];
-        list[0] = v.getPositionX();
-        list[1] = v.getPositionY();
+        //list[0] = v.getPositionX();
+        //list[1] = v.getPositionY();
         return list;
     }
 
