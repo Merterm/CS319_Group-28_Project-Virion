@@ -120,7 +120,8 @@ public class MainMenu extends JPanel {
         menuPanel = new JPanel() {
             @Override
             public void paintComponent(Graphics g) {
-                g.drawImage(new ImageIcon("resources/MenuScreen-Background.png").getImage(), 0, 0, null);
+                super.paintComponent(g);
+                g.drawImage(new ImageIcon("resources/MenuScreen-Background.png").getImage(), 0, 0, this);
             }
         };
 
