@@ -8,4 +8,14 @@ package gamecomponents.virus;
  * Description:
  */
 public class Complex {
+    //Class Attributes
+    private int positionX = 0;
+    private int positionY = 0;
+    private int iconID = 0;
+    private int id = 0;
+    private final int VIRUS_TYPE_COEFFICIENT = 1;
+
+    //Methods
+    //Coming Soon... Wink Wink
+
 }
