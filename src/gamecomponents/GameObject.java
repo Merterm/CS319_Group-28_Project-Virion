@@ -18,7 +18,7 @@ public class GameObject
 
     public void setPositionX(int positionX)
     {
-        PositionX = x;
+        /*PositionX = x;*/
     }
 
     public int getPositionX() {
@@ -37,6 +37,7 @@ public class GameObject
     {
         this.setPositionY(y+radius);        //for now
         this.setPositionX(x+radius);
+        return true; //for now
     }
 
     public boolean destroy()
