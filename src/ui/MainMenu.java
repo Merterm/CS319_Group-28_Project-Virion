@@ -13,8 +13,8 @@ import java.awt.event.MouseEvent;
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
  * Author: Mert İNAN on 8.12.2016.
- * Version: 1.0
- * Description:
+ * Version: 1.1
+ * Description: This is the MainMenu Panel for the UI package
  */
 public class MainMenu extends JPanel {
     private JPanel menuPanel;
@@ -25,14 +25,18 @@ public class MainMenu extends JPanel {
     private JButton toggleMusicButton;
     private JButton helpButton;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { //Automatically generated main method to test MainMenu
         JFrame frame = new JFrame("MainMenu");
         frame.setContentPane(new MainMenu().menuPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
+        frame.setSize(1135, 710);
         frame.setVisible(true);
     }
 
+    /** Default Constructor
+     * Takes no parameters adds the mouseListeners to the buttons.
+     */
     public MainMenu() {
         $$$setupUI$$$();
         playButton.addMouseListener(new MouseAdapter() {
@@ -67,8 +71,17 @@ public class MainMenu extends JPanel {
         });
     }
 
+    /**Constructor for Launcher
+     * Takes most of the controllers as parameters.
+     * @param uiCntrl
+     * @param engine
+     * @param highScoreCntrl
+     * @param iconMngr
+     * @param musicCntrl
+     */
     public MainMenu(UIController uiCntrl, GameEngine engine, HighScoreController highScoreCntrl,
                     IconManager iconMngr, MusicController musicCntrl) {
+        // TODO We need to write a launcher class that contains all the controllers and the UI classes.
         $$$setupUI$$$();
         playButton.addMouseListener(new MouseAdapter() {
             @Override
@@ -103,7 +116,6 @@ public class MainMenu extends JPanel {
     }
 
     private void createUIComponents() {
-        // TODO: place custom component creation code here
         Image img = new ImageIcon("/MenuScreen-Background.png").getImage();
         menuPanel = new JPanel() {
             @Override
@@ -112,7 +124,7 @@ public class MainMenu extends JPanel {
             }
         };
 
-        Dimension size = new Dimension(img.getWidth(null), img.getHeight(null));
+        Dimension size = new Dimension(1135, 710);
         menuPanel.setPreferredSize(size);
         menuPanel.setMinimumSize(size);
         menuPanel.setMaximumSize(size);
@@ -135,32 +147,32 @@ public class MainMenu extends JPanel {
         playButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-PlayButton.png")));
         playButton.setText("");
         playButton.setToolTipText("Start the Game");
-        menuPanel.add(playButton, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, null, new Dimension(50, 15), null, 0, false));
+        menuPanel.add(playButton, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(350, 87), new Dimension(350, 87), new Dimension(350, 87), 0, false));
         highScoreButton = new JButton();
         highScoreButton.setBackground(new Color(-14379403));
         highScoreButton.setEnabled(true);
         highScoreButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-HighScoreButton.png")));
         highScoreButton.setText("");
         highScoreButton.setToolTipText("See High Scores");
-        menuPanel.add(highScoreButton, new GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_WANT_GROW, null, new Dimension(150, 50), null, 0, false));
+        menuPanel.add(highScoreButton, new GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(350, 87), new Dimension(350, 87), new Dimension(350, 87), 0, false));
         quitButton = new JButton();
         quitButton.setBackground(new Color(-14379403));
         quitButton.setEnabled(true);
         quitButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-QuitButton.png")));
         quitButton.setText("");
-        menuPanel.add(quitButton, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, null, null, 0, false));
+        menuPanel.add(quitButton, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(282, 72), new Dimension(282, 72), new Dimension(282, 72), 0, false));
         toggleMusicButton = new JButton();
         toggleMusicButton.setBackground(new Color(-14379403));
         toggleMusicButton.setEnabled(true);
         toggleMusicButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-MusicButton.png")));
         toggleMusicButton.setText("");
-        menuPanel.add(toggleMusicButton, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 50), null, 0, false));
+        menuPanel.add(toggleMusicButton, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(76, 76), new Dimension(76, 76), new Dimension(76, 76), 0, false));
         helpButton = new JButton();
         helpButton.setBackground(new Color(-14379403));
         helpButton.setEnabled(true);
         helpButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-HelpButton.png")));
         helpButton.setText("");
-        menuPanel.add(helpButton, new GridConstraints(4, 1, 1, 1, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_CAN_SHRINK | GridConstraints.SIZEPOLICY_CAN_GROW, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(50, 15), null, 0, false));
+        menuPanel.add(helpButton, new GridConstraints(4, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(76, 76), new Dimension(76, 76), new Dimension(76, 76), 0, false));
         logo = new JTextPane();
         logo.setBackground(new Color(-1));
         logo.setEditable(false);
@@ -168,7 +180,7 @@ public class MainMenu extends JPanel {
         logo.setFont(new Font("Roboto", Font.PLAIN, 96));
         logo.setForeground(new Color(-14379403));
         logo.setText("Virion");
-        menuPanel.add(logo, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_WANT_GROW, GridConstraints.SIZEPOLICY_WANT_GROW, null, new Dimension(150, 50), null, 0, false));
+        menuPanel.add(logo, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 50), null, 0, false));
     }
 
     /**
