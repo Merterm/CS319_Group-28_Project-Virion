@@ -7,5 +7,23 @@ package gamecomponents.organelle;
  * Version: 1.0
  * Description:
  */
-public class Mitochondria {
+public class Mitochondria
+{
+    protected int ATP;
+
+    public int getATP() {
+        return ATP;
+    }
+
+    public void setATP(int ATP) {
+        this.ATP = ATP;
+    }
+
+    public boolean isATPEnough(int requiredATP)
+    {
+        if(requiredATP <= ATP)
+            return true;
+        return false;
+    }
+
 }

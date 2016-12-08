@@ -7,5 +7,23 @@ package gamecomponents;
  * Version: 1.0
  * Description:
  */
-public class MRNA {
+public class MRNA
+{
+    protected int noOfGeneratedProteins, onOfProteins;
+
+    public int getNoOfGeneratedProteins() {
+        return noOfGeneratedProteins;
+    }
+
+    public int getOnOfProteins() {
+        return onOfProteins;
+    }
+
+    public void setNoOfGeneratedProteins(int noOfGeneratedProteins) {
+        this.noOfGeneratedProteins = noOfGeneratedProteins;
+    }
+
+    public void setOnOfProteins(int onOfProteins) {
+        this.onOfProteins = onOfProteins;
+    }
 }
