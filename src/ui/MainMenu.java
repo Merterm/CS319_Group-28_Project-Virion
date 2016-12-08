@@ -28,7 +28,7 @@ public class MainMenu extends JPanel {
     public static void main(String[] args) { //Automatically generated main method to test MainMenu
         JFrame frame = new JFrame("MainMenu");
         frame.setContentPane(new MainMenu().menuPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setSize(1135, 710);
         frame.setVisible(true);
@@ -73,11 +73,12 @@ public class MainMenu extends JPanel {
 
     /**Constructor for Launcher
      * Takes most of the controllers as parameters.
-     * @param uiCntrl
-     * @param engine
-     * @param highScoreCntrl
-     * @param iconMngr
-     * @param musicCntrl
+     * @param uiCntrl: is the user interface controller
+     *               taken as a parameter. This is to be used as a Façade class.
+     * @param engine: is the gameEngine class. Needed to start the game.
+     * @param highScoreCntrl: used if the user clicks on highScoreButton.
+     * @param iconMngr: can be used while getting icons, //TODO
+     * @param musicCntrl: will be used if the user toggles the music.
      */
     public MainMenu(UIController uiCntrl, GameEngine engine, HighScoreController highScoreCntrl,
                     IconManager iconMngr, MusicController musicCntrl) {
@@ -116,7 +117,7 @@ public class MainMenu extends JPanel {
     }
 
     private void createUIComponents() {
-        Image img = new ImageIcon("/MenuScreen-Background.png").getImage();
+        //Image img = new ImageIcon("/MenuScreen-Background.png").getImage();
         menuPanel = new JPanel() {
             @Override
             public void paintComponent(Graphics g) {
