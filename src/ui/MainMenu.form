@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ui.MainMenu">
+  <grid id="27dc6" binding="menuPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="5" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="30" left="200" bottom="30" right="200"/>
+    <constraints>
+      <xy x="20" y="20" width="1406" height="1592"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="1bcdd" class="javax.swing.JButton" binding="playButton">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <enabled value="true"/>
+          <icon value="MenuScreen-PlayButton.png"/>
+          <text value=""/>
+          <toolTipText value="Start the Game"/>
+        </properties>
+      </component>
+      <component id="9bbb9" class="javax.swing.JButton" binding="highScoreButton">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="2" vsize-policy="7" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <enabled value="true"/>
+          <icon value="MenuScreen-HighScoreButton.png"/>
+          <text value=""/>
+          <toolTipText value="See High Scores"/>
+        </properties>
+      </component>
+      <component id="f5051" class="javax.swing.JButton" binding="quitButton">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <enabled value="true"/>
+          <icon value="MenuScreen-QuitButton.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="fe370" class="javax.swing.JButton" binding="toggleMusicButton">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <enabled value="true"/>
+          <icon value="MenuScreen-MusicButton.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="191cd" class="javax.swing.JButton" binding="helpButton">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="50" height="15"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <enabled value="true"/>
+          <icon value="MenuScreen-HelpButton.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="fc462" class="javax.swing.JTextPane" binding="logo">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-1"/>
+          <editable value="false"/>
+          <enabled value="true"/>
+          <font name="Roboto" size="96" style="0"/>
+          <foreground color="-14379403"/>
+          <text value="Virion"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
