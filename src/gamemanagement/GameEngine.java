@@ -19,6 +19,7 @@ public class GameEngine
      * ID of an object can be index of the list */
 
     protected int viralDNACapacity = 100;   //for now 100
+    //number of objects are not know at the start -> vectors are dynamic
     protected Vector<Virus> virusList;
 
     {

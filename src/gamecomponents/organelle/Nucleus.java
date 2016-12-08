@@ -7,5 +7,17 @@ package gamecomponents.organelle;
  * Version: 1.0
  * Description:
  */
-public class Nucleus {
+public class Nucleus
+{
+    protected int viralDnaNo;
+
+    public int getViralDnaNo() {
+        return viralDnaNo;
+    }
+
+    public void setViralDnaNo(int viralDnaNo) {
+        this.viralDnaNo = viralDnaNo;
+    }
+
+
 }

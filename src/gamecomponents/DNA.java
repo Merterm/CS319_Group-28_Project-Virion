@@ -7,5 +7,15 @@ package gamecomponents;
  * Version: 1.0
  * Description:
  */
-public class DNA {
+public class DNA
+{
+    protected int[] viralDnaPosition;
+
+    public int[] getViralDnaPosition() {
+        return viralDnaPosition;
+    }
+
+    public void setViralDnaPosition(int[] viralDnaPosition) {
+        this.viralDnaPosition = viralDnaPosition;
+    }
 }

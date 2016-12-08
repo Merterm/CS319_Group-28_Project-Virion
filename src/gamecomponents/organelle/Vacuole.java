@@ -7,5 +7,24 @@ package gamecomponents.organelle;
  * Version: 1.0
  * Description:
  */
-public class Vacuole {
+public class Vacuole extends Organelle
+{
+    protected int cm;
+
+    public int getCm()
+    {
+        return cm;
+    }
+
+    public void setCm(int cm1)
+    {
+        cm = cm1;
+    }
+
+    public boolean isCMEnough(int requiredCM)
+    {
+        if(requiredCM <= cm)
+            return true;
+        return false;
+    }
 }
