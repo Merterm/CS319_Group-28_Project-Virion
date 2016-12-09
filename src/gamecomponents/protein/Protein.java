@@ -9,7 +9,7 @@ import gamecomponents.GameObject;
  * Version: 1.0
  * Description:
  */
-public class Protein extends GameObject
+public abstract class Protein extends GameObject
 {
     protected int extraCM;
 

@@ -9,7 +9,7 @@ import gamecomponents.GameObject;
  * Version: 1.0
  * Description:
  */
-public class Virus extends GameObject
+public abstract class Virus extends GameObject
 {
     protected int virusTypeCoefficient;
     protected ViralDNA viralDNA = new ViralDNA(false, 1,3,5);

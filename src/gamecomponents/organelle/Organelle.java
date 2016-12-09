@@ -7,5 +7,5 @@ package gamecomponents.organelle;
  * Version: 1.0
  * Description:
  */
-public class Organelle {
+public abstract class Organelle {
 }
