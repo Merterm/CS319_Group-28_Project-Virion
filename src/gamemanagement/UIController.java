@@ -1,8 +1,10 @@
 package gamemanagement;
 
+import ui.InfoPane;
+
 import java.awt.*;
 import java.awt.event.*;
-import javax.swing.*
+import javax.swing.*;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
@@ -15,18 +17,7 @@ public class UIController
     public void openInfoPane()
     {
         JFrame infoFrame = new JFrame("Game Info");
-        infoFrame.setLayout(new FlowLayout());
-        infoFrame.setVisible(true);
-        infoFrame.setSize(400,400);
-        infoFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
-        JPanel infoPanel = new JPanel();
-        infoPanel.setLayout(new FlowLayout());
-        infoPanel.setVisible(true);
-        JLabel infoLabel = new JLabel("Information");
-
-        infoPanel.add("label",infoLabel);
-        infoFrame.add("panel",infoPanel);
+        InfoPane infopanel = new InfoPane(infoFrame);
     }
 
     public void openHelpPane()
