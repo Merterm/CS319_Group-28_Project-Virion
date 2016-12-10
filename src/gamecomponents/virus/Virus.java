@@ -6,15 +6,56 @@ import gamecomponents.GameObject;
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
  * Author: Mert İNAN on 5.12.2016.
- * Version: 1.0
- * Description:
+ * Version: 1.2
+ * Description: This class is the abstract class for all virus
+ *              types. It contains viralDNA as a property. It
+ *              also has virusTypeCoefficient but it is implemented
+ *              in non-abstract classes. Hence, the get and set
+ *              methods for it are abstract.
  */
-public abstract class Virus extends GameObject
-{
-    protected int virusTypeCoefficient;
-    protected ViralDNA viralDNA = new ViralDNA(false, 1,3,5);
 
+public abstract class Virus extends GameObject {
+    //*************************************************
+    //  Class Attributes
+    //*************************************************
+    private ViralDNA viralDNA;
 
+    //*************************************************
+    //  Constructors
+    //*************************************************
+
+    /**
+     *
+     * @param positionX
+     * @param positionY
+     * @param id
+     * @param radius
+     * @param viralDNA
+     */
+    public Virus(int positionX, int positionY, int id, int radius, ViralDNA viralDNA) {
+        super(positionX, positionY, id, radius);
+        this.viralDNA = viralDNA;
+    }
+
+    /**
+     *
+     * @param id
+     */
+    public Virus(int id) {
+        super(id);
+    }
+
+    /**
+     *
+     */
+    public Virus() {
+        super();
+        viralDNA = new ViralDNA();
+    }
+
+    public abstract int getVirusTypeCoefficient();
+
+    public abstract void setVirusTypeCoefficient(int virusTypeCoefficient);
 
     public ViralDNA getViralDNA()
     {

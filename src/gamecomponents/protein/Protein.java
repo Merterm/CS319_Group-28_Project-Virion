@@ -9,10 +9,22 @@ import gamecomponents.GameObject;
  * Version: 1.0
  * Description:
  */
+
 public abstract class Protein extends GameObject
 {
-    protected int extraCM;
+    //Lifetime is missing!
+    //Attributes
+    private int extraCM = 0;
+    private int proteinTypeCoefficient = 0;
 
+    public void setProteinTypeCoefficient(int proteinTypeCoefficient) {
+        this.proteinTypeCoefficient = proteinTypeCoefficient;
+    }
+
+    //Methods
+    public int getProteinTypeCoefficient() {
+        return proteinTypeCoefficient;
+    }
     public int getExtraCM()
     {
         return extraCM;

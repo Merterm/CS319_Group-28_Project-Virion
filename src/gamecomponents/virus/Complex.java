@@ -1,72 +1,66 @@
 package gamecomponents.virus;
 
-import java.util.ArrayList;
-
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
  * Author: Mert İNAN, created on 5.12.2016.
- * Version: 1.1
+ * Version: 1.2
  * Description: This class is the model class for the complex
  *              virus object. It extends Virus abstract class.
  *              All of its attributes and methods are coming from
- *              its parent classes except iconID.
+ *              its parent classes except iconID and virusTypeCoefficient.
  */
 
 public class Complex extends Virus{
-    //Class Attributes
-    private int positionX = 0;
-    private int positionY = 0;
-    private int iconID = 0;
-    private int id = 0;
-    private int radius = 0;
-    private int virusTypeCoefficient = 1;
+    //*************************************************
+    //  Class Attributes
+    //*************************************************
+    private int iconID;
+    private int virusTypeCoefficient;
 
-    //Methods
-    public boolean isAttached() {
-        // TODO Implementation of the method
-        return false;
+    //*************************************************
+    //  Constructors
+    //*************************************************
+    /**
+     *
+     * @param iconID
+     * @param virusTypeCoefficient
+     */
+    public Complex(int id, int iconID, int virusTypeCoefficient) {
+        super(id);
+        this.iconID = iconID;
+        this.virusTypeCoefficient = virusTypeCoefficient;
     }
 
+    /**
+     *
+     */
+    public Complex() {
+        super();
+        this.iconID = 0;
+        this.virusTypeCoefficient = 1;
+    }
+
+    //*************************************************
+    //  Getter/Setter Methods
+    //*************************************************
+    @Override
+    public int getIconID() {
+        return iconID;
+    }
+
+    @Override
+    public void setIconID(int iconID) {
+        this.iconID = iconID;
+    }
+
+    @Override
     public int getVirusTypeCoefficient() {
         return virusTypeCoefficient;
     }
 
+    @Override
     public void setVirusTypeCoefficient(int virusTypeCoefficient) {
         this.virusTypeCoefficient = virusTypeCoefficient;
-    }
-
-    public boolean destroy() {
-        // TODO Implementation of the method
-        return false;
-    }
-
-    public ArrayList<Integer> getPosition() {
-        ArrayList<Integer> position = new ArrayList<Integer>(2);
-        position.add(positionX);
-        position.add(positionY);
-
-        return position;
-    }
-
-    public void goToPosition(int positionX, int positionY) {
-        this.positionX = positionX;
-        this.positionY = positionY;
-    }
-
-    public int getID() {
-        return id;
-    }
-
-    public void setID(int id) {
-        this.id = id;
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
     }
 }
