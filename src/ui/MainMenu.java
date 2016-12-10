@@ -80,7 +80,7 @@ public class MainMenu extends JPanel {
      * @param iconMngr: can be used while getting icons, //TODO
      * @param musicCntrl: will be used if the user toggles the music.
      */
-    public MainMenu(UIController uiCntrl, GameEngine engine, HighScoreController highScoreCntrl,
+    public MainMenu(UIController uiCntrl, GameEngine engine, HighScoreManager highScoreCntrl,
                     IconManager iconMngr, MusicController musicCntrl) {
         // TODO We need to write a launcher class that contains all the controllers and the UI classes.
         $$$setupUI$$$();

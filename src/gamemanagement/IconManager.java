@@ -1,5 +1,7 @@
 package gamemanagement;
 
+import java.awt.image.BufferedImage;
+
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
@@ -8,4 +10,10 @@ package gamemanagement;
  * Description:
  */
 public class IconManager {
+    public BufferedImage getPhoto(int iconID){
+
+    }
+    public BufferedImage getBackground(){
+
+    }
 }

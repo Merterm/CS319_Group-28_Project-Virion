@@ -1,5 +1,8 @@
 package ui;
 
+import javax.swing.*;
+import java.awt.image.BufferedImage;
+
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
@@ -8,4 +11,10 @@ package ui;
  * Description:
  */
 public class Pane {
+    JButton backbutton;
+    JTextField text;
+    JTextField title;
+    BufferedImage background;
+
+
 }
