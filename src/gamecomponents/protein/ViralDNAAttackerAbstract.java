@@ -7,5 +7,7 @@ package gamecomponents.protein;
  * Version: 1.0
  * Description:
  */
-public class ViralDNAAttackerAbstract {
+public class ViralDNAAttackerAbstract
+{
+
 }
