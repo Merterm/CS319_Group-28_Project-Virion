@@ -46,7 +46,7 @@ public class CellController
 
     public void create(GameObject object)
     {
-        object = new GameObject();                          //move this to gameEngine? should work since virus,etc. inherit?
+       // object = new GameObject();                          //move this to gameEngine? should work since virus,etc. inherit?
     }
 
     public  void  stopReconstruction()

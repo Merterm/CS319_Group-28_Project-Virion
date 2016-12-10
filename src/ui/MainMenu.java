@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowEvent;
 
 /**
  * CS319: Object-Oriented Software Engineering Course Project
@@ -27,14 +28,17 @@ public class MainMenu extends JPanel {
 
     public static void main(String[] args) { //Automatically generated main method to test MainMenu
         JFrame frame = new JFrame("MainMenu");
-        frame.setContentPane(new MainMenu().menuPanel);
+        MusicController musicController = new MusicController();
+        new Thread(musicController).start();
+        frame.setContentPane(new MainMenu(frame, musicController).menuPanel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setSize(1135, 710);
         frame.setVisible(true);
     }
 
-    /** Default Constructor
+    /**
+     * Default Constructor
      * Takes no parameters adds the mouseListeners to the buttons.
      */
     public MainMenu() {
@@ -71,17 +75,19 @@ public class MainMenu extends JPanel {
         });
     }
 
-    /**Constructor for Launcher
+    /**
+     * Constructor for Launcher
      * Takes most of the controllers as parameters.
-     * @param uiCntrl: is the user interface controller
-     *               taken as a parameter. This is to be used as a Façade class.
-     * @param engine: is the gameEngine class. Needed to start the game.
+     *
+     * @param uiCntrl:        is the user interface controller
+     *                        taken as a parameter. This is to be used as a Façade class.
+     * @param engine:         is the gameEngine class. Needed to start the game.
      * @param highScoreCntrl: used if the user clicks on highScoreButton.
-     * @param iconMngr: can be used while getting icons, //TODO
-     * @param musicCntrl: will be used if the user toggles the music.
+     * @param iconMngr:       can be used while getting icons, //TODO
+     * @param musicCntrl:     will be used if the user toggles the music.
      */
-    public MainMenu(UIController uiCntrl, GameEngine engine, HighScoreController highScoreCntrl,
-                    IconManager iconMngr, MusicController musicCntrl) {
+    public MainMenu(final JFrame frame, UIController uiCntrl, GameEngine engine, HighScoreController highScoreCntrl,
+                    IconManager iconMngr, final MusicController musicCntrl) {
         // TODO We need to write a launcher class that contains all the controllers and the UI classes.
         $$$setupUI$$$();
         playButton.addMouseListener(new MouseAdapter() {
@@ -100,12 +106,51 @@ public class MainMenu extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         });
         toggleMusicButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                musicCntrl.toggleMusic();
+            }
+        });
+        helpButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+            }
+        });
+    }
+
+    //Constructor for test purposes
+    public MainMenu(final JFrame frame, final MusicController musicCntrl) {
+        $$$setupUI$$$();
+        playButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+            }
+        });
+        highScoreButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+            }
+        });
+        quitButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
+        });
+        toggleMusicButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                musicCntrl.toggleMusic();
             }
         });
         helpButton.addMouseListener(new MouseAdapter() {

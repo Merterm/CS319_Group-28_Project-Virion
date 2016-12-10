@@ -1,8 +1,7 @@
 package gamemanagement;
 
 import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*
+import javax.swing.*;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
