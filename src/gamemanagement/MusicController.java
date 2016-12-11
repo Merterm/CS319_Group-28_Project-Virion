@@ -131,6 +131,8 @@ public class MusicController implements Runnable {
                 clip1.stop();
         }
     }
+
+    //TODO Write the toggleAlarm method
 }
 
 
