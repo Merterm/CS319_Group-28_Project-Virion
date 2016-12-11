@@ -16,8 +16,20 @@ public class IconManager {
         Image image = new ImageIcon("resources/icon"+iconID).getImage();
         return image;
     }
-    public Image getBackground(){
-        Image image = new ImageIcon("resources/background").getImage();
+    public Image getBackground(String menuBackground){
+        Image image = null;
+        if(("InfoPane".compareTo(menuBackground))==1){
+            image = new ImageIcon("resources/infopane").getImage();
+        }
+        if(("GamePanel".compareTo(menuBackground))==1){
+            image = new ImageIcon("resources/gamepanel").getImage();
+        }
+        if(("HelpPanel".compareTo(menuBackground))==1){
+            image = new ImageIcon("resources/helppanel").getImage();
+        }
+        if(("MainMenu".compareTo(menuBackground))==1){
+            image = new ImageIcon("resources/mainmenu").getImage();
+        }
         return image;
     }
 
