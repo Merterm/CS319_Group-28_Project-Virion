@@ -4,6 +4,7 @@
 package gamecomponents;
 public class Cell extends GameObject{
     //variables
+    int iconID;
     int virusCapacity;
     int virusCount;
 
@@ -29,4 +30,12 @@ public class Cell extends GameObject{
         this.setVirusCount(this.getVirusCount()+1);
     }
 
+    public int getIconID() {
+        return iconID;
+    }
+
+    public void setIconID(int iconID) {
+        this.iconID=iconID;
+
+    }
 }

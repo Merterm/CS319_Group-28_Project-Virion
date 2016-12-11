@@ -1,5 +1,7 @@
 package gamemanagement;
 
+import javax.swing.*;
+import java.awt.*;
 import java.awt.image.BufferedImage;
 
 /**
@@ -10,10 +12,14 @@ import java.awt.image.BufferedImage;
  * Description:
  */
 public class IconManager {
-    public BufferedImage getPhoto(int iconID){
-
+    public Image getPhoto(int iconID){
+        Image image = new ImageIcon("resources/icon"+iconID).getImage();
+        return image;
     }
-    public BufferedImage getBackground(){
-
+    public Image getBackground(){
+        Image image = new ImageIcon("resources/background").getImage();
+        return image;
     }
+
+
 }

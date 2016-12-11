@@ -1,6 +1,10 @@
 package gamemanagement;
 
+
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * CS319: Object-Oriented Software Engineering Course Project
@@ -10,25 +14,31 @@ import java.util.ArrayList;
  * Description:
  */
 public class HighScoreManager {
-    public boolean isHighScore(int score){
-        boolean result;
-        ArrayList list = this.readHighScoreList();
-        for(int i = 0; i< list.size(); i++){
-            if(list[i]<score)
+    public boolean isHighScore(int score) throws FileNotFoundException {
+        boolean result = false;
+        ArrayList <Integer> list = this.readHighScoreList();
+        for(int i : list){
+            if(i<score)
                 result=true;
             else
                 result = false;
         }
         return result;
     }
-    public void update HighScoreList(int score, ArrayList credentials){
+    public void updateHighScoreList(int score, ArrayList credentials){
         int i = 0;
         while(i<credentials.size())
             i++;
-        credentials[i]=score;
+        credentials.add(score);
+
     }
-    public ArrayList readHighScoreList(){
-        ArrayList list = new ArrayList();
+    public ArrayList readHighScoreList() throws FileNotFoundException {
+        ArrayList <Integer> list = new ArrayList();
+
+        Scanner scanner = new Scanner(new File("resources/highscore.txt"));
+        while(scanner.hasNextInt()){
+            list.add(scanner.nextInt());
+        }
         return list;
     }
 
