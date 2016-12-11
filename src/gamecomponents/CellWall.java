@@ -10,7 +10,7 @@ package gamecomponents;
 public class CellWall
 {
     //created time variable is important when checking if it's active
-    int duration, extraCM, createdTime;
+    int duration, extraCM, createdTime; //TODO duration java class
     public int getDuration()
     {
         return duration;

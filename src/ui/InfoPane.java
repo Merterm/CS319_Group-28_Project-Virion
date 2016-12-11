@@ -8,11 +8,15 @@ import java.lang.Object;
 import java.beans.*;
 
 /**
- *
+ *game info
  */
 
 public class InfoPane extends Pane
 {
+    /**
+     *
+     * @param infoFrame
+     */
     public InfoPane(final JFrame infoFrame)
     {
         backButton = new JButton("Back");
@@ -25,7 +29,7 @@ public class InfoPane extends Pane
 
         backButton.addActionListener(new Action() {
 
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e) {//todo mouse
                 infoFrame.dispose();
 
             }

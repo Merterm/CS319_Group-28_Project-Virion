@@ -41,7 +41,7 @@ public class CellController
 
     public int calculateRequiredCM(Protein proteinType)
     {
-        return proteinType.getExtraCM();                    //do we need this method?? why not just call getextraCM() of protein?
+        return proteinType.getExtraCM();    //todo                //do we need this method?? why not just call getextraCM() of protein?
     }
 
     public void create(GameObject object)
@@ -51,12 +51,12 @@ public class CellController
 
     public  void  stopReconstruction()
     {
-        //to be implemented
+        //todo to be implemented
     }
 
     public void sendFinder(int id)
     {
-        //to be implemented
+        //todo to be implemented
     }
 
     public void attackVirus(Vector<Protein> proteins, int viralID)
@@ -74,7 +74,7 @@ public class CellController
     /*
     public void getMegaOut(id)
     public void randomizeDNALocation()
-    public void checkRibosomes()
+    public void checkRibosomes() //full or not
     public boolean isAntibodyPresent() */
 
 }
