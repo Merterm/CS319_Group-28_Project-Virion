@@ -1,5 +1,5 @@
 /**
- * Created by irmak.yilmaz-ug on 06.12.2016.
+ * Created by irmak.yilmaz-ug on 06.12.2016. Cell class
  */
 package gamecomponents;
 public class Cell extends GameObject{
