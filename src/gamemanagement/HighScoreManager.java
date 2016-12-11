@@ -14,6 +14,8 @@ import java.util.Scanner;
  * Description:
  */
 public class HighScoreManager {
+    private ArrayList<Integer> credentials;
+
     public boolean isHighScore(int score) throws FileNotFoundException {
         boolean result = false;
         ArrayList <Integer> list = this.readHighScoreList();
@@ -25,12 +27,10 @@ public class HighScoreManager {
         }
         return result;
     }
-    public void updateHighScoreList(int score, ArrayList credentials){
-        int i = 0;
-        while(i<credentials.size())
-            i++;
-        credentials.add(score);
 
+
+    public void updateHighScoreList(int score, ArrayList<Integer> credentials){
+        credentials.add(score);
     }
     public ArrayList readHighScoreList() throws FileNotFoundException {
         ArrayList <Integer> list = new ArrayList();
