@@ -1,5 +1,7 @@
 package ui;
 
+import javax.swing.*;
+
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
@@ -8,4 +10,7 @@ package ui;
  * Description:
  */
 public class PausePanel {
+    private JButton button1;
+    private JButton button2;
+    private JButton button3;
 }
