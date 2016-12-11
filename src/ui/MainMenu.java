@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.WindowEvent;
 
 /**
  * CS319: Object-Oriented Software Engineering Course Project
@@ -27,14 +28,17 @@ public class MainMenu extends JPanel {
 
     public static void main(String[] args) { //Automatically generated main method to test MainMenu
         JFrame frame = new JFrame("MainMenu");
-        frame.setContentPane(new MainMenu().menuPanel);
+        MusicController musicController = new MusicController();
+        new Thread(musicController).start();
+        frame.setContentPane(new MainMenu(frame, musicController).menuPanel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.pack();
         frame.setSize(1135, 710);
         frame.setVisible(true);
     }
 
-    /** Default Constructor
+    /**
+     * Default Constructor
      * Takes no parameters adds the mouseListeners to the buttons.
      */
     public MainMenu() {
@@ -71,17 +75,19 @@ public class MainMenu extends JPanel {
         });
     }
 
-    /**Constructor for Launcher
+    /**
+     * Constructor for Launcher
      * Takes most of the controllers as parameters.
-     * @param uiCntrl: is the user interface controller
-     *               taken as a parameter. This is to be used as a Façade class.
-     * @param engine: is the gameEngine class. Needed to start the game.
+     *
+     * @param uiCntrl:        is the user interface controller
+     *                        taken as a parameter. This is to be used as a Façade class.
+     * @param engine:         is the gameEngine class. Needed to start the game.
      * @param highScoreCntrl: used if the user clicks on highScoreButton.
-     * @param iconMngr: can be used while getting icons, //TODO
-     * @param musicCntrl: will be used if the user toggles the music.
+     * @param iconMngr:       can be used while getting icons, //TODO
+     * @param musicCntrl:     will be used if the user toggles the music.
      */
-    public MainMenu(UIController uiCntrl, GameEngine engine, HighScoreController highScoreCntrl,
-                    IconManager iconMngr, MusicController musicCntrl) {
+    public MainMenu(final JFrame frame, UIController uiCntrl, GameEngine engine, HighScoreManager highScoreCntrl,
+                    IconManager iconMngr, final MusicController musicCntrl) {
         // TODO We need to write a launcher class that contains all the controllers and the UI classes.
         $$$setupUI$$$();
         playButton.addMouseListener(new MouseAdapter() {
@@ -100,12 +106,51 @@ public class MainMenu extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
             }
         });
         toggleMusicButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                musicCntrl.toggleMusic();
+            }
+        });
+        helpButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+            }
+        });
+    }
+
+    //Constructor for test purposes
+    public MainMenu(final JFrame frame, final MusicController musicCntrl) {
+        $$$setupUI$$$();
+        playButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+            }
+        });
+        highScoreButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+            }
+        });
+        quitButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                frame.dispatchEvent(new WindowEvent(frame, WindowEvent.WINDOW_CLOSING));
+            }
+        });
+        toggleMusicButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                musicCntrl.toggleMusic();
             }
         });
         helpButton.addMouseListener(new MouseAdapter() {
@@ -147,13 +192,16 @@ public class MainMenu extends JPanel {
         playButton.setBackground(new Color(-14379403));
         playButton.setEnabled(true);
         playButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-PlayButton.png")));
+        playButton.setOpaque(false);
         playButton.setText("");
         playButton.setToolTipText("Start the Game");
+        playButton.setVisible(true);
         menuPanel.add(playButton, new GridConstraints(1, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(350, 87), new Dimension(350, 87), new Dimension(350, 87), 0, false));
         highScoreButton = new JButton();
         highScoreButton.setBackground(new Color(-14379403));
         highScoreButton.setEnabled(true);
         highScoreButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-HighScoreButton.png")));
+        highScoreButton.setOpaque(false);
         highScoreButton.setText("");
         highScoreButton.setToolTipText("See High Scores");
         menuPanel.add(highScoreButton, new GridConstraints(2, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(350, 87), new Dimension(350, 87), new Dimension(350, 87), 0, false));
@@ -161,18 +209,24 @@ public class MainMenu extends JPanel {
         quitButton.setBackground(new Color(-14379403));
         quitButton.setEnabled(true);
         quitButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-QuitButton.png")));
+        quitButton.setOpaque(false);
         quitButton.setText("");
         menuPanel.add(quitButton, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(282, 72), new Dimension(282, 72), new Dimension(282, 72), 0, false));
         toggleMusicButton = new JButton();
         toggleMusicButton.setBackground(new Color(-14379403));
+        toggleMusicButton.setBorderPainted(false);
         toggleMusicButton.setEnabled(true);
         toggleMusicButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-MusicButton.png")));
+        toggleMusicButton.setOpaque(false);
         toggleMusicButton.setText("");
+        toggleMusicButton.setToolTipText("Toggle Music");
         menuPanel.add(toggleMusicButton, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(76, 76), new Dimension(76, 76), new Dimension(76, 76), 0, false));
         helpButton = new JButton();
         helpButton.setBackground(new Color(-14379403));
+        helpButton.setBorderPainted(false);
         helpButton.setEnabled(true);
         helpButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-HelpButton.png")));
+        helpButton.setOpaque(false);
         helpButton.setText("");
         menuPanel.add(helpButton, new GridConstraints(4, 1, 1, 1, GridConstraints.ANCHOR_WEST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(76, 76), new Dimension(76, 76), new Dimension(76, 76), 0, false));
         logo = new JTextPane();
@@ -180,7 +234,8 @@ public class MainMenu extends JPanel {
         logo.setEditable(false);
         logo.setEnabled(true);
         logo.setFont(new Font("Roboto", Font.PLAIN, 96));
-        logo.setForeground(new Color(-14379403));
+        logo.setForeground(new Color(-4473925));
+        logo.setOpaque(false);
         logo.setText("Virion");
         menuPanel.add(logo, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 50), null, 0, false));
     }

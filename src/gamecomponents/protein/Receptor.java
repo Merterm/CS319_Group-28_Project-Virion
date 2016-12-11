@@ -1,6 +1,7 @@
 package gamecomponents.protein;
 
-import java.util.ArrayList;
+
+import java.time.Duration;
 
 /**
  * CS319: Object-Oriented Software Engineering Course Project
@@ -11,38 +12,45 @@ import java.util.ArrayList;
  */
 
 public class Receptor extends Protein{
-    //Attributes
-    public boolean destroy() {
-        // TODO Implementation of the method
-        return false;
+    //*************************************************
+    //  Class Attributes
+    //*************************************************
+    private Duration lifetime;
+    private int iconID;
+    private int proteinTypeCoefficient;
+
+    //*************************************************
+    //  Constructors
+    //*************************************************
+    /**
+     *
+     * @param iconID
+     * @param proteinTypeCoefficient
+     */
+    public Receptor(int id, int iconID, int proteinTypeCoefficient) {
+        //super(id);
+        this.iconID = iconID;
+        this.proteinTypeCoefficient = proteinTypeCoefficient;
     }
 
-    public ArrayList<Integer> getPosition() {
-        ArrayList<Integer> position = new ArrayList<Integer>(2);
-        position.add(positionX);
-        position.add(positionY);
-
-        return position;
+    /**
+     *
+     */
+    public Receptor() {
+        super();
+        this.iconID = 0;
+        this.proteinTypeCoefficient = 1;
     }
 
-    public void goToPosition(int positionX, int positionY) {
-        super.positionX = positionX;
-        super.positionY = positionY;
+    //*************************************************
+    //  Getter/Setter Methods
+    //*************************************************
+    public int getIconID() {
+        return iconID;
     }
 
-    public int getID() {
-        return id;
+    public void setIconID(int iconID) {
+        this.iconID = iconID;
     }
 
-    public void setID(int id) {
-        this.id = id;
-    }
-
-    public int getRadius() {
-        return radius;
-    }
-
-    public void setRadius(int radius) {
-        this.radius = radius;
-    }
 }
