@@ -9,8 +9,7 @@ import gamecomponents.GameObject;
  * Version: 1.0
  * Description:
  */
-public class ViralDNA extends GameObject
-{
+public class ViralDNA extends GameObject {
     protected boolean isInside = false;
     protected int speed, lifetime, virusTypeCoefficient;
 
@@ -54,5 +53,13 @@ public class ViralDNA extends GameObject
 
     public void setLifetime(int lifetime) {
         this.lifetime = lifetime;
+    }
+
+    public int getIconID() {
+        return 0;
+    }
+
+    public void setIconID(int iconID) {
+
     }
 }

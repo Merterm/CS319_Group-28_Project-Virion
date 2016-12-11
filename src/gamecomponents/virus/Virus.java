@@ -13,7 +13,6 @@ import gamecomponents.GameObject;
  *              in non-abstract classes. Hence, the get and set
  *              methods for it are abstract.
  */
-
 public abstract class Virus extends GameObject {
     //*************************************************
     //  Class Attributes
@@ -23,7 +22,6 @@ public abstract class Virus extends GameObject {
     //*************************************************
     //  Constructors
     //*************************************************
-
     /**
      *
      * @param positionX
@@ -50,7 +48,7 @@ public abstract class Virus extends GameObject {
      */
     public Virus() {
         super();
-        viralDNA = new ViralDNA();
+        //viralDNA = new ViralDNA();
     }
 
     public abstract int getVirusTypeCoefficient();

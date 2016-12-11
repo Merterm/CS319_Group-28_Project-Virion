@@ -1,5 +1,6 @@
 package gamemanagement;
 
+import gamecomponents.virus.Complex;
 import gamecomponents.virus.ViralDNA;
 import gamecomponents.virus.Virus;
 
@@ -16,8 +17,8 @@ public class VirusController
     {
         ViralDNA viralDNA = virus.getViralDNA();
 
-        viralDNA.setPositionX(postion[0]);
-        viralDNA.setPositionY(postion[1]);
+        //viralDNA.setPositionX(postion[0]);
+        //viralDNA.setPositionY(postion[1]);
 
         virus.destroy();
 
@@ -32,7 +33,7 @@ public class VirusController
     public Virus calculateVirusType()
     {
         //don't know about this either
-        Virus v = new Virus();
+        Virus v = new Complex();
         return  v;
     }
 

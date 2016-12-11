@@ -20,8 +20,10 @@
           <background color="-14379403"/>
           <enabled value="true"/>
           <icon value="MenuScreen-PlayButton.png"/>
+          <opaque value="false"/>
           <text value=""/>
           <toolTipText value="Start the Game"/>
+          <visible value="true"/>
         </properties>
       </component>
       <component id="9bbb9" class="javax.swing.JButton" binding="highScoreButton">
@@ -36,6 +38,7 @@
           <background color="-14379403"/>
           <enabled value="true"/>
           <icon value="MenuScreen-HighScoreButton.png"/>
+          <opaque value="false"/>
           <text value=""/>
           <toolTipText value="See High Scores"/>
         </properties>
@@ -52,6 +55,7 @@
           <background color="-14379403"/>
           <enabled value="true"/>
           <icon value="MenuScreen-QuitButton.png"/>
+          <opaque value="false"/>
           <text value=""/>
         </properties>
       </component>
@@ -65,9 +69,12 @@
         </constraints>
         <properties>
           <background color="-14379403"/>
+          <borderPainted value="false"/>
           <enabled value="true"/>
           <icon value="MenuScreen-MusicButton.png"/>
+          <opaque value="false"/>
           <text value=""/>
+          <toolTipText value="Toggle Music"/>
         </properties>
       </component>
       <component id="191cd" class="javax.swing.JButton" binding="helpButton">
@@ -80,8 +87,10 @@
         </constraints>
         <properties>
           <background color="-14379403"/>
+          <borderPainted value="false"/>
           <enabled value="true"/>
           <icon value="MenuScreen-HelpButton.png"/>
+          <opaque value="false"/>
           <text value=""/>
         </properties>
       </component>
@@ -96,7 +105,8 @@
           <editable value="false"/>
           <enabled value="true"/>
           <font name="Roboto" size="96" style="0"/>
-          <foreground color="-14379403"/>
+          <foreground color="-4473925"/>
+          <opaque value="false"/>
           <text value="Virion"/>
         </properties>
       </component>
