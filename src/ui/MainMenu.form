@@ -59,24 +59,6 @@
           <text value=""/>
         </properties>
       </component>
-      <component id="fe370" class="javax.swing.JButton" binding="toggleMusicButton">
-        <constraints>
-          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
-            <minimum-size width="76" height="76"/>
-            <preferred-size width="76" height="76"/>
-            <maximum-size width="76" height="76"/>
-          </grid>
-        </constraints>
-        <properties>
-          <background color="-14379403"/>
-          <borderPainted value="false"/>
-          <enabled value="true"/>
-          <icon value="MenuScreen-MusicButton.png"/>
-          <opaque value="false"/>
-          <text value=""/>
-          <toolTipText value="Toggle Music"/>
-        </properties>
-      </component>
       <component id="191cd" class="javax.swing.JButton" binding="helpButton">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
@@ -108,6 +90,30 @@
           <foreground color="-4473925"/>
           <opaque value="false"/>
           <text value="Virion"/>
+        </properties>
+      </component>
+      <component id="fe370" class="javax.swing.JButton" binding="toggleMusicButton">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="76" height="76"/>
+            <preferred-size width="76" height="76"/>
+            <maximum-size width="76" height="76"/>
+          </grid>
+        </constraints>
+        <properties>
+          <alignmentY value="0.5"/>
+          <background color="-14379403"/>
+          <borderPainted value="false"/>
+          <enabled value="true"/>
+          <horizontalAlignment value="0"/>
+          <icon value="MenuScreen-MusicButton.png"/>
+          <inheritsPopupMenu value="false"/>
+          <margin top="2" left="14" bottom="2" right="14"/>
+          <opaque value="false"/>
+          <rolloverEnabled value="false"/>
+          <selected value="false"/>
+          <text value=""/>
+          <toolTipText value="Toggle Music"/>
         </properties>
       </component>
     </children>

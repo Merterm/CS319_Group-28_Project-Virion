@@ -2,6 +2,7 @@ package ui;
 
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
+import com.intellij.uiDesigner.core.Spacer;
 import gamemanagement.*;
 
 import javax.swing.*;
@@ -212,15 +213,6 @@ public class MainMenu extends JPanel {
         quitButton.setOpaque(false);
         quitButton.setText("");
         menuPanel.add(quitButton, new GridConstraints(3, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(282, 72), new Dimension(282, 72), new Dimension(282, 72), 0, false));
-        toggleMusicButton = new JButton();
-        toggleMusicButton.setBackground(new Color(-14379403));
-        toggleMusicButton.setBorderPainted(false);
-        toggleMusicButton.setEnabled(true);
-        toggleMusicButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-MusicButton.png")));
-        toggleMusicButton.setOpaque(false);
-        toggleMusicButton.setText("");
-        toggleMusicButton.setToolTipText("Toggle Music");
-        menuPanel.add(toggleMusicButton, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(76, 76), new Dimension(76, 76), new Dimension(76, 76), 0, false));
         helpButton = new JButton();
         helpButton.setBackground(new Color(-14379403));
         helpButton.setBorderPainted(false);
@@ -238,6 +230,21 @@ public class MainMenu extends JPanel {
         logo.setOpaque(false);
         logo.setText("Virion");
         menuPanel.add(logo, new GridConstraints(0, 0, 1, 2, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, null, new Dimension(150, 50), null, 0, false));
+        toggleMusicButton = new JButton();
+        toggleMusicButton.setAlignmentY(0.5f);
+        toggleMusicButton.setBackground(new Color(-14379403));
+        toggleMusicButton.setBorderPainted(false);
+        toggleMusicButton.setEnabled(true);
+        toggleMusicButton.setHorizontalAlignment(0);
+        toggleMusicButton.setIcon(new ImageIcon(getClass().getResource("/MenuScreen-MusicButton.png")));
+        toggleMusicButton.setInheritsPopupMenu(false);
+        toggleMusicButton.setMargin(new Insets(2, 14, 2, 14));
+        toggleMusicButton.setOpaque(false);
+        toggleMusicButton.setRolloverEnabled(false);
+        toggleMusicButton.setSelected(false);
+        toggleMusicButton.setText("");
+        toggleMusicButton.setToolTipText("Toggle Music");
+        menuPanel.add(toggleMusicButton, new GridConstraints(4, 0, 1, 1, GridConstraints.ANCHOR_EAST, GridConstraints.FILL_NONE, GridConstraints.SIZEPOLICY_FIXED, GridConstraints.SIZEPOLICY_FIXED, new Dimension(76, 76), new Dimension(76, 76), new Dimension(76, 76), 0, false));
     }
 
     /**
