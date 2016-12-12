@@ -3,7 +3,7 @@ package gamecomponents.virus;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN, created on 5.12.2016.
+ * Author: Mert &#x130;NAN, created on 5.12.2016.
  * Version: 1.2
  * Description: This class is the model class for the complex
  *              virus object. It extends Virus abstract class.

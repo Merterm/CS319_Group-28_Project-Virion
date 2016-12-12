@@ -110,7 +110,7 @@ public abstract class GameObject
      */
     public void goToPosition(int positionX, int positionY) {
         this.positionX = positionX;
-        this.positionY = positionY;
+        this.positionY = positionY; //TODO call UI controller's changePosition method
     }
 
     /**

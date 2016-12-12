@@ -33,12 +33,12 @@ public class UIController
 
     public void pause()
     {
-        //...
+        //...set bool
     }
 
     public void changePosition()
     {
-        //...
+        //...moves ui
     }
 
 }
