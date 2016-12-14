@@ -14,10 +14,13 @@ import javax.swing.*;
  */
 public class UIController
 {
+    /**
+     *
+     */
     public void openInfoPane()
     {
-        JFrame infoFrame = new JFrame("Game Info");
-        InfoPane infopanel = new InfoPane(infoFrame);
+        //JFrame infoFrame = new JFrame("Game Info");
+        //InfoPane infopanel = new InfoPane(infoFrame);
     }
 
     public void openHelpPane()

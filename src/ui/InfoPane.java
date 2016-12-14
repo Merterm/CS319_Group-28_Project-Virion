@@ -2,17 +2,18 @@ package ui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.image.BufferedImage;
-import java.lang.Object;
-import java.beans.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /**
- *game info
+ * Game information panel
  */
 
 public class InfoPane extends Pane
 {
+    private JTextPane infoTextPane;
+    private JPanel panel1;
+
     /**
      *
      * @param infoFrame
@@ -22,51 +23,15 @@ public class InfoPane extends Pane
         backButton = new JButton("Back");
         panel = new JPanel(new FlowLayout());
         panel.add(backButton);
-        infoFrame.setContentPane(panel);
-        infoFrame.pack();
-        infoFrame.setSize(100,100);
-        infoFrame.setVisible(true);
 
-        backButton.addActionListener(new Action() {
+        backButton.addMouseListener(new MouseAdapter() {
 
-            public void actionPerformed(ActionEvent e) {//todo mouse
+            public void mouseClicked(MouseEvent e)
+            {
                 infoFrame.dispose();
-
             }
-            public boolean isEnabled() {
-                return false;
-            }
-            public void setEnabled(boolean b){
-
-            }
-
-            public Object getValue(String key) {
-                return null;
-            }
-
-            public void putValue(String key, Object value) {
-
-            }
-
-            public void addPropertyChangeListener(PropertyChangeListener listener) {
-
-            }
-
-            public void removePropertyChangeListener(PropertyChangeListener listener) {
-
-            }
-
 
         });
     }
 
-    /*DOES NOT WORK OUTSIDE THE CONSTRUCTOR
-    backButton.addActionListener(new ActionListener()
-    {
-        public void actionPerformed(ActionEvent e)
-        {
-            //back to main menu
-        }
-    });
-    */
 }

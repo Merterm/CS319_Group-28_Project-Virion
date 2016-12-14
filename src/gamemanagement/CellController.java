@@ -20,7 +20,11 @@ public class CellController
 {
     private int viralDNACapacity = 0;
 
-    /*changed from virus to viralDNA & added parameter*/
+    /**
+     *
+     * @param currentCapacity
+     * @return
+     */
     public boolean isViralDNACapacityReached(int currentCapacity)
     {
         if(currentCapacity == viralDNACapacity)
@@ -46,7 +50,7 @@ public class CellController
 
     public void create(GameObject object)
     {
-       // object = new GameObject();                          //move this to gameEngine? should work since virus,etc. inherit?
+       //object = new GameObject();
     }
 
     public  void  stopReconstruction()
@@ -61,13 +65,15 @@ public class CellController
 
     public void attackVirus(Vector<Protein> proteins, int viralID)
     {
-        /*ViralDNA toBeAttacked = viralDNAList.get(viralID);
+        //todo when the list of objects in GameEngine is available
+        /*
+        ViralDNA toBeAttacked = viralDNAList.get(viralID);
         int x = toBeAttacked.getPositionX();
         int y = toBeAttacked.getPositionY();
         Iterator i = proteins.iterator();
         while(i.hasNext())
         {
-            Protein p = (Protein) i.next();                             //casted to Protein
+            Protein p = (Protein) i.next();
             p.goToPostion(x,y);
         }*/
     }

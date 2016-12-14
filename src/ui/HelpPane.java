@@ -1,13 +1,31 @@
 package ui;
 
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+
 /**
- * CS319: Object-Oriented Software Engineering Course Project
- * Project Virion
- * Author: Ulugbek Irmatov on 12/10/2016.
- * Version: 1.0
- * Description:
+ * Created by Ulugbek on 12/14/2016.
  */
-public class HelpPane extends Pane
-{
-    /*IF INFOPANE IMPLEMENTATION IS CORRECT THEN THIS WILL BE IMPLEMENTED SINCE THEY'RE SIMILAR*/
+public class HelpPane extends Pane {
+    private JTextPane HelpTextPane;
+    private JPanel helpPanel;
+    private JButton backButton;
+
+    public HelpPane(final JFrame infoFrame)
+    {
+        backButton = new JButton("Back");
+        panel = new JPanel(new FlowLayout());
+        panel.add(backButton);
+
+        backButton.addMouseListener(new MouseAdapter() {
+
+            public void mouseClicked(MouseEvent e)
+            {
+                infoFrame.dispose();
+            }
+
+        });
+    }
 }
