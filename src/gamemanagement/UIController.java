@@ -1,5 +1,6 @@
 package gamemanagement;
 
+import ui.HelpPane;
 import ui.InfoPane;
 
 import java.awt.*;
@@ -8,26 +9,35 @@ import javax.swing.*;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN on 5.12.2016.
+ * Author: Ulugbek
  * Version: 1.0
- * Description:
+ * Description: methods of this class control the UI components
+ * ...
  */
 public class UIController
 {
     /**
      *
+     * @param frame
      */
-    public void openInfoPane()
+    public void openInfoPane(JFrame frame)
     {
-        //JFrame infoFrame = new JFrame("Game Info");
-        //InfoPane infopanel = new InfoPane(infoFrame);
+        InfoPane panel = new InfoPane(frame);
     }
 
-    public void openHelpPane()
+    /**
+     *
+     * @param frame
+     */
+    public void openHelpPane(JFrame frame)
     {
-        //...
+        HelpPane panel = new HelpPane(frame);
     }
 
+    /**
+     *
+     * @param dnaLocations
+     */
     public void openDNAFinderWindow(int[] dnaLocations)
     {
         JWindow postInfecWindow = new JWindow();

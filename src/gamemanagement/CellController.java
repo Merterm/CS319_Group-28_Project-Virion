@@ -6,13 +6,15 @@ import gamecomponents.protein.Protein;
 import gamecomponents.virus.ViralDNA;
 
 
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Iterator;
 import java.util.Vector;
 
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN on 5.12.2016.
+ * Author: Ulugbek Irmatov
  * Version: 1.0
  * Description:
  */
@@ -32,15 +34,22 @@ public class CellController
         return false;
     }
 
-    /*added cellWall object as param*/
+    /**
+     *
+     * @param cw
+     * @return
+     */
     public boolean isCellWallActive(CellWall cw)
     {
-        int duration = cw.getDuration();
-        /*
-        int test = currentTime - cw.getCreatedTime();           this could be a way
-        if(test>=duration)
-            return false;*/
-        return true;
+        Duration duration = cw.getDuration();
+
+        Instant createdTime = cw.getCreatedTime();
+        Instant currentTime = Instant.now();
+        Duration duration2 = Duration.between(createdTime, currentTime);
+
+        boolean active = duration.equals(duration2);
+
+        return active;
     }
 
     public int calculateRequiredCM(Protein proteinType)

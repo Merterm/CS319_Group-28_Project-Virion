@@ -1,22 +1,46 @@
 package gamecomponents;
 
+import java.time.Duration;
+import java.time.Instant;
+
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN on 5.12.2016.
+ * Author: Ulugbek Irmatov
  * Version: 1.0
  * Description:
  */
 public class CellWall
 {
-    //created time variable is important when checking if it's active
-    int duration, extraCM, createdTime; //TODO duration java class
-    public int getDuration()
+    /**IMPORTANT!!! This is how Duration object can be used.
+     * Instant first = Instant.now();
+     / wait some time while something happens
+     Instant second = Instant.now();
+     Duration duration = Duration.between(first, second);
+     methods--- plusSeconds(), minusSeconds()
+     */
+
+    //*************************************************
+    //  Class Attributes
+    //*************************************************
+    private int extraCM;
+    private Instant createdTime;
+    private Duration duration;
+
+
+    public CellWall(int extraCM,Instant now)           /* end = now.plusSeconds(some time) */
+    {
+        extraCM = 0;
+        createdTime = now;
+        duration = Duration.ofSeconds(30);
+    }
+
+    public Duration getDuration()
     {
         return duration;
     }
 
-    public void setDuration(int duration) {
+    public void setDuration(Duration duration) {
         this.duration = duration;
     }
 
@@ -28,11 +52,11 @@ public class CellWall
         this.extraCM = extraCM;
     }
 
-    public int getCreatedTime() {
+    public Instant getCreatedTime() {
         return createdTime;
     }
 
-    public void setCreatedTime(int createdTime) {
+    public void setCreatedTime(Instant createdTime) {
         this.createdTime = createdTime;
     }
 }
