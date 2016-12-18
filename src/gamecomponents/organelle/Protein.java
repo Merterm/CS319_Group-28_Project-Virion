@@ -8,10 +8,10 @@ import gamecomponents.GameObject;
 
 public class Protein extends GameObject {
     //variables
-    int iconID;
-    int extraCM;
-    int lifetime;
-    int coefficient;
+    private int iconID;
+    private int extraCM;
+    private int lifetime;
+    private int coefficient;
 
     public Protein(int extraCM, int lifetime, int coefficient) {
         this.extraCM = extraCM;
