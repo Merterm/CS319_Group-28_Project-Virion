@@ -54,7 +54,8 @@ public class CellController
 
     public int calculateRequiredCM(Protein proteinType)
     {
-        return proteinType.getExtraCM();    //todo                //do we need this method?? why not just call getextraCM() of protein?
+        int extraCm = 1000*proteinType.getProteinTypeCoefficient();
+        return extraCm;
     }
 
     public void create(GameObject object)
