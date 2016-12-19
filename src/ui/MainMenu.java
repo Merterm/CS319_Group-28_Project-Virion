@@ -5,6 +5,7 @@ import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import gamemanagement.*;
 
+import javax.smartcardio.Card;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
@@ -19,7 +20,7 @@ import java.awt.event.WindowEvent;
  * Description: This is the MainMenu Panel for the UI package
  */
 public class MainMenu extends JPanel {
-    private JPanel menuPanel;
+    public JPanel menuPanel;
     private JButton playButton;
     private JButton highScoreButton;
     private JButton quitButton;
@@ -87,7 +88,7 @@ public class MainMenu extends JPanel {
      * @param iconMngr:       can be used while getting icons, //TODO
      * @param musicCntrl:     will be used if the user toggles the music.
      */
-    public MainMenu(final JFrame frame, UIController uiCntrl, GameEngine engine, HighScoreManager highScoreCntrl,
+    public MainMenu(final JFrame frame, final JPanel screens, UIController uiCntrl, GameEngine engine, HighScoreManager highScoreCntrl,
                     IconManager iconMngr, final MusicController musicCntrl) {
         // TODO We need to write a launcher class that contains all the controllers and the UI classes.
         $$$setupUI$$$();
@@ -95,6 +96,8 @@ public class MainMenu extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                //TODO Call the gameEngine's start() function.
+                ((CardLayout) screens.getLayout()).show(screens, "GamePanel"); //Changes the panel in the screens
             }
         });
         highScoreButton.addMouseListener(new MouseAdapter() {
