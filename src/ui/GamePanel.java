@@ -34,7 +34,7 @@ public class GamePanel extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("GamePanel");
         frame.setContentPane(new GamePanel().gamePanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(1135, 710);
         frame.setVisible(true);
     }
