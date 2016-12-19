@@ -1,24 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ui.InfoPane">
-  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="infoPanel" custom-create="true" layout-manager="GridLayoutManager" row-count="4" column-count="23" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="762"/>
+      <xy x="20" y="20" width="641" height="1095"/>
     </constraints>
     <properties/>
     <border type="none"/>
     <children>
       <component id="d59a2" class="javax.swing.JTextPane" binding="infoTextPane">
         <constraints>
-          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="1" fill="1" indent="0" use-parent-layout="false">
             <preferred-size width="50" height="50"/>
           </grid>
         </constraints>
         <properties>
-          <font name="Book Antiqua" size="12" style="0"/>
-          <text value="In this educational game project, the user is left with a virus trying to enter a cell, and the user can save the cell by using certain organelles' functions. They can also try to save the cell after the infection as well, or help the surrounding cells to not get infected.  The options that the user have will be different for the pre-infection and post-infection stages. In the pre-infection stage, the user will try to stop the virus reaching the nucleus of the cell with various functions of different organelles. For instance, it can change the surface proteins to disable the virus to connect to the cell, or use certain proteins to attack the viral DNA produced by the mRNA of the host cell and the ribosomes. All of these functions will be dependent on the energy sources (ATP) produced by the mithochondria, which can get infected by the virus as well. In the post-infection stage, the focus will be on surrounding cells as well with the current cell. The cell can either try to sacrifice itself to save the other cells or it can try to remove the viral DNA from its own DNA by using proteins. Viruses will continue to come and as time passes more vigourous virus will start to appear. The objective of the game is to survive as long as possible. Each organelle needs time to produce the required component to attack the virus. Each type of virus is also different in terms of its strength, endurance and speed, as each organelle can also produce different compounds and have different abilities. Different organelles can work together, as well. Score will be the time of survival."/>
+          <background color="-1"/>
+          <editable value="false"/>
+          <font name="Roboto" size="12" style="0"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <text value="In this educational game project, the user is left with a virus trying to enter a cell, and the user can save the cell by using certain organelles' functions. They can also try to save the cell after the infection as well, or help the surrounding cells to not get infected.  The options that the user have will be different for the pre-infection and post-infection stages. In the pre-infection stage, the user will try to stop the virus reaching the nucleus of the cell with various functions of different organelles. For instance, it can change the surface proteins to disable the virus to connect to the cell, or use certain proteins to attack the viral DNA produced by the mRNA of the host cell and the ribosomes."/>
         </properties>
       </component>
+      <hspacer id="9a8df">
+        <constraints>
+          <grid row="3" column="22" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="60789">
+        <constraints>
+          <grid row="3" column="21" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="8617">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="15928">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <component id="66203" class="javax.swing.JTextPane" binding="infoTitle">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="50"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Roboto" size="26" style="0"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <selectedTextColor color="-1"/>
+          <text value="Info"/>
+        </properties>
+      </component>
+      <hspacer id="11214">
+        <constraints>
+          <grid row="3" column="20" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="59ef9">
+        <constraints>
+          <grid row="3" column="19" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="7c903">
+        <constraints>
+          <grid row="3" column="18" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="da44b">
+        <constraints>
+          <grid row="3" column="17" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="260be">
+        <constraints>
+          <grid row="3" column="16" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="49213">
+        <constraints>
+          <grid row="3" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="1e8ac">
+        <constraints>
+          <grid row="3" column="14" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="275b1">
+        <constraints>
+          <grid row="3" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="60861" class="javax.swing.JButton" binding="button2" default-binding="true">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <icon value="BackButton.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <hspacer id="83c69">
+        <constraints>
+          <grid row="3" column="12" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="553c2">
+        <constraints>
+          <grid row="3" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="db736">
+        <constraints>
+          <grid row="3" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="78e05">
+        <constraints>
+          <grid row="3" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="38c25">
+        <constraints>
+          <grid row="3" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="1104d">
+        <constraints>
+          <grid row="3" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="216c9">
+        <constraints>
+          <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="6aaf2">
+        <constraints>
+          <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="51058">
+        <constraints>
+          <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="a92a4">
+        <constraints>
+          <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="915f3">
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
     </children>
   </grid>
 </form>

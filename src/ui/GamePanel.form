@@ -1,13 +1,470 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="ui.GamePanel">
-  <grid id="27dc6" row-count="1" column-count="1" layout-manager="GridLayoutManager">
+  <grid id="27dc6" binding="gamePanel" custom-create="true" layout-manager="GridLayoutManager" row-count="29" column-count="34" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="500" height="400"/>
-      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+      <xy x="20" y="20" width="1277" height="621"/>
     </constraints>
     <properties/>
     <border type="none"/>
-    <children/>
+    <children>
+      <component id="b0cba" class="javax.swing.JButton" binding="helpButton">
+        <constraints>
+          <grid row="0" column="33" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="41" height="41"/>
+            <preferred-size width="41" height="41"/>
+            <maximum-size width="41" height="41"/>
+          </grid>
+        </constraints>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <icon value="HelpIcon.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <hspacer id="69c27">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="411ab" class="javax.swing.JButton" binding="pauseButton">
+        <constraints>
+          <grid row="0" column="32" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="41" height="41"/>
+            <preferred-size width="41" height="41"/>
+            <maximum-size width="41" height="41"/>
+          </grid>
+        </constraints>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <icon value="PauseIcon.png"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <vspacer id="11eb8">
+        <constraints>
+          <grid row="28" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="7259a">
+        <constraints>
+          <grid row="27" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="ad3e5">
+        <constraints>
+          <grid row="26" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="cca47">
+        <constraints>
+          <grid row="25" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="46410">
+        <constraints>
+          <grid row="24" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="7ed52">
+        <constraints>
+          <grid row="23" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="d687d">
+        <constraints>
+          <grid row="22" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="4a139">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="2f95a">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="16cdd">
+        <constraints>
+          <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="ee980">
+        <constraints>
+          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="f1402">
+        <constraints>
+          <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="5e392">
+        <constraints>
+          <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="59e5">
+        <constraints>
+          <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="b2f63">
+        <constraints>
+          <grid row="0" column="8" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="df31e">
+        <constraints>
+          <grid row="0" column="9" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <component id="6774d" class="javax.swing.JTextPane" binding="timeText">
+        <constraints>
+          <grid row="0" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Roboto" size="16" style="1"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <text value="Time:"/>
+        </properties>
+      </component>
+      <component id="a4ef4" class="javax.swing.JTextPane" binding="scoreTextPane">
+        <constraints>
+          <grid row="0" column="23" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Roboto" size="16" style="1"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <text value="Score:"/>
+        </properties>
+      </component>
+      <component id="dfc1e" class="javax.swing.JTextPane" binding="timeDisplayText">
+        <constraints>
+          <grid row="0" column="22" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <caretColor color="-14379403"/>
+          <editable value="false"/>
+          <foreground color="-1"/>
+          <opaque value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2fd79" class="javax.swing.JTextPane" binding="scoreDisplayText">
+        <constraints>
+          <grid row="0" column="24" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <caretColor color="-14379403"/>
+          <editable value="false"/>
+          <foreground color="-1"/>
+          <opaque value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="320e" class="javax.swing.JTextPane" binding="atpDisplayText">
+        <constraints>
+          <grid row="0" column="26" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <caretColor color="-14379403"/>
+          <editable value="false"/>
+          <foreground color="-1"/>
+          <opaque value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="ed413" class="javax.swing.JTextPane" binding="cmDisplayText">
+        <constraints>
+          <grid row="0" column="28" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <caretColor color="-14379403"/>
+          <editable value="false"/>
+          <foreground color="-1"/>
+          <opaque value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="6136d" class="javax.swing.JTextPane" binding="virusCountDisplayText">
+        <constraints>
+          <grid row="0" column="30" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <background color="-14379403"/>
+          <caretColor color="-14379403"/>
+          <editable value="false"/>
+          <foreground color="-1"/>
+          <opaque value="true"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="b43f7" class="javax.swing.JTextPane" binding="atpText">
+        <constraints>
+          <grid row="0" column="25" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Roboto" size="16" style="1"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <text value="ATP:"/>
+        </properties>
+      </component>
+      <component id="aa710" class="javax.swing.JTextPane" binding="cmText">
+        <constraints>
+          <grid row="0" column="27" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="50" height="25"/>
+            <preferred-size width="50" height="25"/>
+            <maximum-size width="50" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Roboto" size="16" style="1"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <text value="CM:"/>
+        </properties>
+      </component>
+      <component id="20aaa" class="javax.swing.JTextPane" binding="virusCountText">
+        <constraints>
+          <grid row="0" column="29" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="4" fill="0" indent="0" use-parent-layout="false">
+            <minimum-size width="70" height="25"/>
+            <preferred-size width="70" height="25"/>
+            <maximum-size width="70" height="25"/>
+          </grid>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <font name="Roboto" size="16" style="1"/>
+          <foreground color="-1"/>
+          <opaque value="false"/>
+          <text value="Virus #:"/>
+        </properties>
+      </component>
+      <component id="31ef9" class="javax.swing.JButton" binding="musicButton">
+        <constraints>
+          <grid row="0" column="31" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+            <minimum-size width="41" height="41"/>
+            <preferred-size width="41" height="41"/>
+            <maximum-size width="41" height="41"/>
+          </grid>
+        </constraints>
+        <properties>
+          <borderPainted value="false"/>
+          <contentAreaFilled value="false"/>
+          <icon value="MusicIcon.png"/>
+          <inheritsPopupMenu value="true"/>
+          <opaque value="false"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <vspacer id="70a2c">
+        <constraints>
+          <grid row="21" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="9d12">
+        <constraints>
+          <grid row="20" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="3e140">
+        <constraints>
+          <grid row="19" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="569ca">
+        <constraints>
+          <grid row="18" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="2867e">
+        <constraints>
+          <grid row="17" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="30f51">
+        <constraints>
+          <grid row="16" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="5a1e9">
+        <constraints>
+          <grid row="15" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="c4138">
+        <constraints>
+          <grid row="14" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="a821c">
+        <constraints>
+          <grid row="13" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="29da1">
+        <constraints>
+          <grid row="12" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="6dc15">
+        <constraints>
+          <grid row="11" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="b9d8a">
+        <constraints>
+          <grid row="10" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="86efe">
+        <constraints>
+          <grid row="9" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="8127c">
+        <constraints>
+          <grid row="8" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="6a32a">
+        <constraints>
+          <grid row="7" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="b4610">
+        <constraints>
+          <grid row="0" column="10" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="83b27">
+        <constraints>
+          <grid row="0" column="11" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="6070e">
+        <constraints>
+          <grid row="0" column="12" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="ce6bf">
+        <constraints>
+          <grid row="0" column="13" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <vspacer id="e85ec">
+        <constraints>
+          <grid row="6" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="4c6d6">
+        <constraints>
+          <grid row="5" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="21091">
+        <constraints>
+          <grid row="4" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="b6395">
+        <constraints>
+          <grid row="3" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="74d13">
+        <constraints>
+          <grid row="2" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <vspacer id="14e16">
+        <constraints>
+          <grid row="1" column="21" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </vspacer>
+      <hspacer id="4f425">
+        <constraints>
+          <grid row="0" column="14" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="6f2f5">
+        <constraints>
+          <grid row="0" column="15" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="ea24a">
+        <constraints>
+          <grid row="0" column="16" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="d661d">
+        <constraints>
+          <grid row="0" column="17" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="1778">
+        <constraints>
+          <grid row="0" column="18" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="e9da7">
+        <constraints>
+          <grid row="0" column="19" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+      <hspacer id="3b1a7">
+        <constraints>
+          <grid row="0" column="20" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+      </hspacer>
+    </children>
   </grid>
 </form>

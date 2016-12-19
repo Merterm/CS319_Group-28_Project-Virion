@@ -62,14 +62,14 @@ public class GameEngine
      */
     public int calculateDenaturationTime(int virusID,int proteinID){
         int result = 0;
-        for(int i = 0; i<proteinList.size();i++){
+        /*for(int i = 0; i<proteinList.size();i++){
             if(proteinList.get(i).getProteinTypeCoefficient()==proteinID)
                 result= 90* proteinList.get(i).getProteinTypeCoefficient();
         }
         for(int i = 0; i<virusList.size();i++){
             if(virusList.get(i).getVirusTypeCoefficient()==virusID)
                 result=result-virusList.get(i).getVirusTypeCoefficient();
-        }
+        }*/
         return result;
     }
 
