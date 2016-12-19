@@ -1,4 +1,4 @@
-This file contains the IDs corresponding to the icons of the game Objects.
+This file contains the IDs corresponding to the icons of the game objects.
 
 iconID              GameObject
 ------              ----------

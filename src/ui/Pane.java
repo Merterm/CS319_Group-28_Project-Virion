@@ -10,7 +10,7 @@ import java.awt.image.BufferedImage;
  * Version: 1.0
  * Description:
  */
-public class Pane extends JPanel
+public abstract class Pane extends JPanel
 {
     JPanel panel;
     JButton backButton;
