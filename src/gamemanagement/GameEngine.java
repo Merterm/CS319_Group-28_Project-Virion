@@ -13,17 +13,17 @@ import java.util.Vector;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN on 5.12.2016.
+ * Author: Mert İNAN Uluğbek Irmatov Irmak Yılmaz on 5.12.2016.
  * Version: 1.0
  * Description:
  */
 public class GameEngine
 {
     //todo hash hashmap hashtable map dict
-    private int score;
-    private int time;
-    private int cmCount;
-    private int atpCount;
+    private int score=0;
+    private int time=0;
+    private int cmCount=10000;
+    private int atpCount=1000;
 
     protected int viralDNACapacity = 100;   //for now 100
 
@@ -60,17 +60,46 @@ public class GameEngine
      * @param proteinID
      * @return
      */
-    public int calculateDenaturationTime(int virusID,int proteinID){
+    public int calculateDenaturationTime(int virusID,int proteinID) {
+        int result1 = 0;
+        int result2 = 0;
         int result = 0;
-        /*for(int i = 0; i<proteinList.size();i++){
-            if(proteinList.get(i).getProteinTypeCoefficient()==proteinID)
-                result= 90* proteinList.get(i).getProteinTypeCoefficient();
+        for (int i = 0; i < ObjectList.size(); i++) {
+            if (ObjectList.get(i) instanceof Protein) {
+                Protein p = (Protein) ObjectList.get(i);
+                if (p.getIconID() == proteinID)
+                    result1 = p.getProteinTypeCoefficient();
+            }
+            if (ObjectList.get(i) instanceof Virus) {
+                Virus v = (Virus) ObjectList.get(i);
+                if (v.getIconID() == virusID)
+                    result2 = v.getVirusTypeCoefficient();
+            }
         }
-        for(int i = 0; i<virusList.size();i++){
-            if(virusList.get(i).getVirusTypeCoefficient()==virusID)
-                result=result-virusList.get(i).getVirusTypeCoefficient();
-        }*/
+        result = 90 * result1 - result2;
         return result;
+    }
+
+    public int calculateDurability(int virusID, int proteinID){
+        int result1 = 0;
+        int result2 = 0;
+        int result = 0;
+        for (int i = 0; i < ObjectList.size(); i++) {
+            if (ObjectList.get(i) instanceof Protein) {
+                Protein p = (Protein) ObjectList.get(i);
+                if (p.getIconID() == proteinID)
+                    result1 = p.getProteinTypeCoefficient();
+            }
+            if (ObjectList.get(i) instanceof Virus) {
+                Virus v = (Virus) ObjectList.get(i);
+                if (v.getIconID() == virusID)
+                    result2 = v.getVirusTypeCoefficient();
+            }
+        }
+        //will be changed according to the stage of infection
+        result= 5*result2 - result1;
+        return result;
+
     }
 
     public void updateScore()
