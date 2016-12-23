@@ -1,7 +1,10 @@
 package gamemanagement;
 
+import gamecomponents.Cell;
 import gamecomponents.GameObject;
+import gamecomponents.organelle.*;
 import gamecomponents.protein.Protein;
+import gamecomponents.virus.Complex;
 import gamecomponents.virus.ViralDNA;
 import gamecomponents.virus.Virus;
 
@@ -19,12 +22,13 @@ import java.util.Vector;
  */
 public class GameEngine
 {
-    //todo hash hashmap hashtable map dict
     private int score=0;
     private int time=0;
     private int cmCount=10000;
     private int atpCount=1000;
     private boolean paused;
+    static final int updatesPerSecond = 4;
+    static final long updatePeriod = 1000000000L/updatesPerSecond;
     private boolean preInfection=false;
     private boolean postInfection=false;
 
@@ -40,26 +44,58 @@ public class GameEngine
 
     public void start() {
         initialize();
-        gameLoop();
+        //gameLoop();
+        Thread gameThread = new Thread()
+        {
+            @Override
+            public void run()
+            {
+                gameLoop();
+            }
+        };
     }
 
     private void initialize() {
+        Cell cell = new Cell(viralDNACapacity,0);
+        Golgi golgi = new Golgi();
+        Mitochondria mitochondria = new Mitochondria();
+        Nucleus nucleus = new Nucleus();
+        Ribosome ribosome = new Ribosome();
+        Vacuole vacuole = new Vacuole();
+
+        Complex complex1 = new Complex();
+        Complex complex2 = new Complex();
+
         //UIController.createComponent(id);
         //UIController
 
     }
 
     private void gameLoop() {
+        long beginTime, timeTaken, timeLeft;
+        beginTime = System.nanoTime();
         while (!paused) {
             processInput();
             update();
             render();
         }
+        //repaint();
+        timeTaken = System.nanoTime() - beginTime;
+        timeLeft = (updatePeriod - timeTaken)/1000000;
+        if(timeLeft < 10)
+            timeLeft = 10;
+        try
+        {
+            Thread.sleep(timeLeft);
+        }catch (InterruptedException ex){}
     }
 
     private void processInput() {}
 
-    private void update() {}
+    private void update()
+    {
+
+    }
 
     private void render() {}
 
