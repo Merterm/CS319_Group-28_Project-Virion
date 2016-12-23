@@ -3,8 +3,6 @@ package ui;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 
-import com.intellij.uiDesigner.core.GridConstraints;
-import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 
 import javax.swing.*;
@@ -39,9 +37,8 @@ public class HelpPane extends Pane {
 
         backButton.addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-                ((CardLayout) screens.getLayout()).show(screens, "MainMenu"); //Changes the panel in the screens
-            }
-
+                    ((CardLayout) screens.getLayout()).previous(screens); //Changes the panel in the screens
+                }
         });
     }
 

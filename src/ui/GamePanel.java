@@ -37,19 +37,19 @@ public class GamePanel extends JPanel {
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("GamePanel");
-        frame.setContentPane(new GamePanel(new MusicController()).gamePanel);
+        frame.setContentPane(new GamePanel(new MusicController(), new JPanel()).gamePanel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(1135, 710);
         frame.setVisible(true);
     }
 
-    public GamePanel(final MusicController musicController) {
+    public GamePanel(final MusicController musicController, final JPanel screens) {
         this.setLayout(new OverlayLayout(this));
         this.setSize(1135, 710);
         $$$setupUI$$$();
 
         infoPane = new InfoPane().infoPanel;
-        this.add(infoPane);
+        //this.add(infoPane);
         this.add(gamePanel);
         this.setOpaque(false);
 
@@ -64,12 +64,14 @@ public class GamePanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                ((CardLayout) screens.getLayout()).show(screens, "PausePanel"); //Changes the panel in the screens
             }
         });
         helpButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                ((CardLayout) screens.getLayout()).show(screens, "HelpPanel"); //Changes the panel in the screens
             }
         });
     }
