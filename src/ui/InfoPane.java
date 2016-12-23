@@ -39,7 +39,7 @@ public class InfoPane extends Pane {
         backButton.addMouseListener(new MouseAdapter() {
 
             public void mouseClicked(MouseEvent e) {
-                /*infoFrame.dispose();*/
+                infoFrame.dispose();
             }
 
         });
