@@ -28,14 +28,14 @@ public class HighScoreManager {
         return result;
     }
 
-
     public void updateHighScoreList(int score, ArrayList<Integer> credentials){
         credentials.add(score);
     }
+
     public ArrayList readHighScoreList() throws FileNotFoundException {
         ArrayList <Integer> list = new ArrayList();
 
-        Scanner scanner = new Scanner(new File("resources/highscore.txt"));
+        Scanner scanner = new Scanner(new File("resources/highscorelist.txt"));
         while(scanner.hasNextInt()){
             list.add(scanner.nextInt());
         }
