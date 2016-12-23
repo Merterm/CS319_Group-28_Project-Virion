@@ -22,6 +22,9 @@ import java.util.Vector;
  */
 public class GameEngine
 {
+    //*************************************************
+    //  Class Attributes
+    //*************************************************
     private int score=0;
     private int time=0;
     private int cmCount=10000;
@@ -36,12 +39,21 @@ public class GameEngine
 
     private Vector<GameObject> ObjectList = new Vector<GameObject>(2,2);
 
-    //Constructor
+    //*************************************************
+    //  Constructors
+    //*************************************************
+    /**
+     *
+     */
     public GameEngine() {
     }
 
-    //methods
-
+    //*************************************************
+    //  Methods
+    //*************************************************
+    /**
+     *
+     */
     public void start() {
         initialize();
         //gameLoop();
@@ -56,6 +68,9 @@ public class GameEngine
         gameThread.start();
     }
 
+    /**
+     *
+     */
     private void initialize() {
         Cell cell = new Cell(viralDNACapacity,0);
         Golgi golgi = new Golgi();
@@ -72,6 +87,9 @@ public class GameEngine
 
     }
 
+    /**
+     *
+     */
     private void gameLoop() {
         long beginTime, timeTaken, timeLeft;
         beginTime = System.nanoTime();
@@ -91,13 +109,22 @@ public class GameEngine
         }catch (InterruptedException ex){}
     }
 
+    /**
+     *
+     */
     private void processInput() {}
 
+    /**
+     *
+     */
     private void update()
     {
 
     }
 
+    /**
+     *
+     */
     private void render() {}
 
     /**
@@ -112,6 +139,10 @@ public class GameEngine
             this.atpCount=this.atpCount + 1000;
         }
     }
+
+    /**
+     *
+     */
     public void increaseCM(){
         for(int i = 0; i>=0; i++) {
             try {
@@ -148,6 +179,12 @@ public class GameEngine
         return result;
     }
 
+    /**
+     *
+     * @param virusID
+     * @param proteinID
+     * @return
+     */
     public int calculateDurability(int virusID, int proteinID){
         int result1 = 0;
         int result2 = 0;
@@ -175,11 +212,17 @@ public class GameEngine
 
     }
 
+    /**
+     *
+     */
     public void updateScore()
     {
 
     }
 
+    /**
+     *
+     */
     public void calculateFinalScore()
     {
 
@@ -192,7 +235,7 @@ public class GameEngine
      */
     public int calculateProteinProductionTime(Protein proteinType)
     {
-        return (10*proteinType.getProteinTypeCoefficient());
+        return (10 * proteinType.getProteinTypeCoefficient());
     }
 
     /**
