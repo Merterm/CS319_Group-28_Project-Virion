@@ -51,15 +51,17 @@ public class Launcher {
                 return false;
             }
         }; //Need to always add the inner panel
-        JPanel helpPanel = new HelpPane(screens).helpPanel;
+        JPanel helpPanel1 = new HelpPane(screens).helpPanel;
+        JPanel helpPanel2 = new HelpPane(screens).helpPanel;
         JPanel infoPane = new InfoPane();
         JPanel pausePanel = new PausePanel(virionFrame, screens).pausePanel;
         JPanel highScorePanel = new HighScorePanel(screens, highScoreManager).highScorePanel;
         //This is the important part. In order to switch between different screens CardLayout is used.
 
         screens.add(mainMenuScreen, "MainMenu");
+        screens.add(helpPanel1, "HelpPanel1");
         screens.add(gamePanel, "GamePanel");
-        screens.add(helpPanel, "HelpPanel");
+        screens.add(helpPanel2, "HelpPanel2");
         screens.add(infoPane, "InfoPanel");
         screens.add(pausePanel, "PausePanel");
         screens.add(highScorePanel, "HighScorePanel");

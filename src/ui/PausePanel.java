@@ -35,7 +35,7 @@ public class PausePanel extends JPanel {
         helpButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                ((CardLayout) screens.getLayout()).show(screens, "HelpPanel"); //Changes the panel in the screens
+                ((CardLayout) screens.getLayout()).show(screens, "HelpPanel2"); //Changes the panel in the screens
             }
         });
         quitButton.addMouseListener(new MouseAdapter() {

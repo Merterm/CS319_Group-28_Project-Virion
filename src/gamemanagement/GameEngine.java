@@ -53,6 +53,7 @@ public class GameEngine
                 gameLoop();
             }
         };
+        gameThread.start();
     }
 
     private void initialize() {

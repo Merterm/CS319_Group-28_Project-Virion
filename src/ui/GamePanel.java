@@ -71,7 +71,7 @@ public class GamePanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                ((CardLayout) screens.getLayout()).show(screens, "HelpPanel"); //Changes the panel in the screens
+                ((CardLayout) screens.getLayout()).show(screens, "HelpPanel2"); //Changes the panel in the screens
             }
         });
     }
