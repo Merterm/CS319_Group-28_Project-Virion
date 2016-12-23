@@ -21,6 +21,7 @@ public class UIController
     //  Class Variables
     //*************************************************
     private ArrayList<Component> gameComponentUI;
+    private JPanel gamePanel;
 
     //*************************************************
     //  Constructors
@@ -28,8 +29,9 @@ public class UIController
     /**
      * Default constructor
      */
-    public UIController() {
+    public UIController(JPanel gamePanel) {
         gameComponentUI = new ArrayList<Component>();
+        this.gamePanel = gamePanel;
     }
 
     //*************************************************
@@ -39,7 +41,7 @@ public class UIController
      *
      * @param iconID
      */
-    public void createComponent(final int iconID, int positionX, int positionY, int radius) {
+    public void createComponent(final int iconID, int positionX, int positionY) {
         Component temp = new Component() {
             @Override
             public void paint(Graphics g) {
@@ -106,6 +108,9 @@ public class UIController
         }
 
         temp.setBounds(new Rectangle(new Point(positionX, positionY), temp.getPreferredSize()));
+        temp.setVisible(true);
+        gameComponentUI.add(temp);
+        gamePanel.add(temp);
     }
 
     /**

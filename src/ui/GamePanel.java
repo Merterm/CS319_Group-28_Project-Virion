@@ -4,6 +4,7 @@ import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
 import gamemanagement.MusicController;
+import gamemanagement.UIController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -33,24 +34,36 @@ public class GamePanel extends JPanel {
     private JTextPane virusCountText;
     public JPanel gamePanel;
     private JPanel infoPane;
+    private JLayeredPane gameComponentPane;
 
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("GamePanel");
-        frame.setContentPane(new GamePanel(new MusicController(), new JPanel()).gamePanel);
+        GamePanel gamePanel = new GamePanel(new MusicController(), new JPanel());
+        frame.setContentPane(gamePanel);
+        UIController uiController = new UIController(gamePanel);
+        uiController.createComponent(41, 100, 100);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(1135, 710);
         frame.setVisible(true);
     }
 
     public GamePanel(final MusicController musicController, final JPanel screens) {
+        gameComponentPane = new JLayeredPane();
+        gameComponentPane.add(infoPane, 0); //TODO Think about these JlayeredPanes
+        gameComponentPane.add(gamePanel, 1);
+        gameComponentPane.setLayer(infoPane, 1);
+        gameComponentPane.setLayer(gamePanel, 0);
         this.setLayout(new OverlayLayout(this));
         this.setSize(1135, 710);
         $$$setupUI$$$();
 
         infoPane = new InfoPane().infoPanel;
         //this.add(infoPane);
-        this.add(gamePanel);
+        //this.add(gamePanel);
+        this.add(gameComponentPane);
+        gameComponentPane.setOpaque(false);
+        gamePanel.setOpaque(false);
         this.setOpaque(false);
 
         musicButton.addMouseListener(new MouseAdapter() {

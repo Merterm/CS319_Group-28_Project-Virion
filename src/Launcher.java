@@ -32,7 +32,15 @@ public class Launcher {
         IconManager iconManager = new IconManager();
         MovementController movementController = new MovementController();
         MusicController musicController = new MusicController();
-        UIController uiController = new UIController();
+
+        JPanel gamePanel = new GamePanel(musicController, screens) {
+            @Override
+            public boolean isOptimizedDrawingEnabled() {
+                return false;
+            }
+        }; //Need to always add the inner panel
+        UIController uiController = new UIController(gamePanel);
+
         VirusController virusController = new VirusController();
 
         // -----
@@ -45,12 +53,7 @@ public class Launcher {
         // ------
         screens = new JPanel(new CardLayout());
         JPanel mainMenuScreen = new MainMenu(virionFrame, screens, uiController, gameEngine, highScoreManager, iconManager, musicController);
-        JPanel gamePanel = new GamePanel(musicController, screens) {
-            @Override
-            public boolean isOptimizedDrawingEnabled() {
-                return false;
-            }
-        }; //Need to always add the inner panel
+
         JPanel helpPanel1 = new HelpPane(screens).helpPanel;
         JPanel helpPanel2 = new HelpPane(screens).helpPanel;
         JPanel infoPane = new InfoPane();
