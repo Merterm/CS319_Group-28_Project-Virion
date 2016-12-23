@@ -34,16 +34,12 @@ public class HelpPane extends Pane {
         $$$setupUI$$$();
     }
 
-    public HelpPane(final JFrame infoFrame) {
+    public HelpPane(final JPanel screens) {
         $$$setupUI$$$();
-        backButton = new JButton("Back");
-        panel = new JPanel(new FlowLayout());
-        panel.add(backButton);
 
         backButton.addMouseListener(new MouseAdapter() {
-
             public void mouseClicked(MouseEvent e) {
-                infoFrame.dispose();
+                ((CardLayout) screens.getLayout()).show(screens, "MainMenu"); //Changes the panel in the screens
             }
 
         });

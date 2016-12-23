@@ -38,6 +38,8 @@ public class GameEngine
     }
 
     private void initialize() {
+        //UIController.createComponent(id);
+        //UIController
 
     }
 

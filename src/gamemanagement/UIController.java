@@ -29,10 +29,10 @@ public class UIController
      *
      * @param frame
      */
-    public void openHelpPane(JFrame frame)
+    /*public void openHelpPane(JFrame frame)
     {
         HelpPane panel = new HelpPane(frame);
-    }
+    }*/
 
     /**
      *

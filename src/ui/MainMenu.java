@@ -131,6 +131,7 @@ public class MainMenu extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                ((CardLayout) screens.getLayout()).show(screens, "HelpPanel"); //Changes the panel in the screens
             }
         });
     }

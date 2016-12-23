@@ -167,9 +167,10 @@
           <background color="-14379403"/>
           <caretColor color="-14379403"/>
           <editable value="false"/>
+          <font name="Roboto" size="12" style="1"/>
           <foreground color="-1"/>
           <opaque value="true"/>
-          <text value=""/>
+          <text value="0"/>
         </properties>
       </component>
       <component id="2fd79" class="javax.swing.JTextPane" binding="scoreDisplayText">
@@ -184,9 +185,10 @@
           <background color="-14379403"/>
           <caretColor color="-14379403"/>
           <editable value="false"/>
+          <font name="Roboto" size="12" style="1"/>
           <foreground color="-1"/>
           <opaque value="true"/>
-          <text value=""/>
+          <text value="0"/>
         </properties>
       </component>
       <component id="320e" class="javax.swing.JTextPane" binding="atpDisplayText">
@@ -201,9 +203,10 @@
           <background color="-14379403"/>
           <caretColor color="-14379403"/>
           <editable value="false"/>
+          <font name="Roboto" size="12" style="1"/>
           <foreground color="-1"/>
           <opaque value="true"/>
-          <text value=""/>
+          <text value="1000"/>
         </properties>
       </component>
       <component id="ed413" class="javax.swing.JTextPane" binding="cmDisplayText">
@@ -218,9 +221,10 @@
           <background color="-14379403"/>
           <caretColor color="-14379403"/>
           <editable value="false"/>
+          <font name="Roboto" size="12" style="1"/>
           <foreground color="-1"/>
           <opaque value="true"/>
-          <text value=""/>
+          <text value="10000"/>
         </properties>
       </component>
       <component id="6136d" class="javax.swing.JTextPane" binding="virusCountDisplayText">
@@ -235,9 +239,10 @@
           <background color="-14379403"/>
           <caretColor color="-14379403"/>
           <editable value="false"/>
+          <font name="Roboto" size="12" style="1"/>
           <foreground color="-1"/>
           <opaque value="true"/>
-          <text value=""/>
+          <text value="0"/>
         </properties>
       </component>
       <component id="b43f7" class="javax.swing.JTextPane" binding="atpText">

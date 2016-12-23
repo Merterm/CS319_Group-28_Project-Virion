@@ -51,7 +51,7 @@ public class Launcher {
                 return false;
             }
         }; //Need to always add the inner panel
-        JPanel helpPanel = new HelpPane();
+        JPanel helpPanel = new HelpPane(screens).helpPanel;
         JPanel infoPane = new InfoPane();
         JPanel pausePanel = new PausePanel(); //TODO Add the highscorepanel here as well.
         //This is the important part. In order to switch between different screens CardLayout is used.
