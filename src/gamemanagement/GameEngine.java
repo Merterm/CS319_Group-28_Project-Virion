@@ -24,11 +24,15 @@ public class GameEngine
     private int time=0;
     private int cmCount=10000;
     private int atpCount=1000;
+    private boolean paused;
 
     protected int viralDNACapacity = 100;   //for now 100
 
     private Vector<GameObject> ObjectList = new Vector<GameObject>(2,2);
 
+    //Constructor
+    public GameEngine() {
+    }
 
     //methods
 
@@ -44,8 +48,18 @@ public class GameEngine
     }
 
     private void gameLoop() {
-
+        while (!paused) {
+            processInput();
+            update();
+            render();
+        }
     }
+
+    private void processInput() {}
+
+    private void update() {}
+
+    private void render() {}
 
     /**
      *
