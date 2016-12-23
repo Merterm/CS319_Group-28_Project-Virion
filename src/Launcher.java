@@ -54,6 +54,7 @@ public class Launcher {
         JPanel helpPanel = new HelpPane(screens).helpPanel;
         JPanel infoPane = new InfoPane();
         JPanel pausePanel = new PausePanel(); //TODO Add the highscorepanel here as well.
+        JPanel highScorePanel = new HighScorePanel(screens, highScoreManager).highScorePanel;
         //This is the important part. In order to switch between different screens CardLayout is used.
 
         screens.add(mainMenuScreen, "MainMenu");
@@ -61,6 +62,7 @@ public class Launcher {
         screens.add(helpPanel, "HelpPanel");
         screens.add(infoPane, "InfoPanel");
         screens.add(pausePanel, "PausePanel");
+        screens.add(highScorePanel, "HighScorePanel");
         ((CardLayout) screens.getLayout()).show(screens, "MainMenu");
 
         new Thread(musicController).start();

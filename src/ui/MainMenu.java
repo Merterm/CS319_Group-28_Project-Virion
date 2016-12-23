@@ -111,6 +111,7 @@ public class MainMenu extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                ((CardLayout) screens.getLayout()).show(screens, "HighScorePanel"); //Changes the panel in the screens
             }
         });
         quitButton.addMouseListener(new MouseAdapter() {
