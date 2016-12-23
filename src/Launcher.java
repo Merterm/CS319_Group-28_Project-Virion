@@ -44,8 +44,13 @@ public class Launcher {
         // Panels
         // ------
         screens = new JPanel(new CardLayout());
-        JPanel mainMenuScreen = new MainMenu(virionFrame, screens, uiController, gameEngine, highScoreManager, iconManager, musicController).menuPanel;
-        JPanel gamePanel = new GamePanel().gamePanel; //Need to always add the inner panel
+        JPanel mainMenuScreen = new MainMenu(virionFrame, screens, uiController, gameEngine, highScoreManager, iconManager, musicController);
+        JPanel gamePanel = new GamePanel(musicController) {
+            @Override
+            public boolean isOptimizedDrawingEnabled() {
+                return false;
+            }
+        }; //Need to always add the inner panel
         JPanel helpPanel = new HelpPane();
         JPanel infoPane = new InfoPane();
         JPanel pausePanel = new PausePanel(); //TODO Add the highscorepanel here as well.

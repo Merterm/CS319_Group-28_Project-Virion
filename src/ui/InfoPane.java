@@ -15,7 +15,7 @@ import java.awt.event.MouseEvent;
 
 public class InfoPane extends Pane {
     private JTextPane infoTextPane;
-    private JPanel infoPanel;
+    public JPanel infoPanel;
     private JButton button2;
     private JTextPane infoTitle;
 
@@ -29,7 +29,6 @@ public class InfoPane extends Pane {
     }
 
     /**
-     * @param infoFrame
      */
     public InfoPane(final JFrame infoFrame) {
         backButton = new JButton("Back");
@@ -40,13 +39,14 @@ public class InfoPane extends Pane {
         backButton.addMouseListener(new MouseAdapter() {
 
             public void mouseClicked(MouseEvent e) {
-                infoFrame.dispose();
+                /*infoFrame.dispose();*/
             }
 
         });
     }
 
     public InfoPane() {
+        this.setOpaque(false);
         $$$setupUI$$$();
     }
 

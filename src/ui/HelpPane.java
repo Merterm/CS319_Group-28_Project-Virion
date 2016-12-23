@@ -17,7 +17,7 @@ import java.awt.event.MouseEvent;
  */
 public class HelpPane extends Pane {
     private JTextPane helpTextPane;
-    private JPanel helpPanel;
+    public JPanel helpPanel;
     private JButton backButton;
     private JTextPane helpInfo;
 
@@ -30,6 +30,7 @@ public class HelpPane extends Pane {
     }
 
     public HelpPane() {
+        this.setOpaque(false);
         $$$setupUI$$$();
     }
 

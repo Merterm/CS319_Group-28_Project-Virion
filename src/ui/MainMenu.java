@@ -21,6 +21,7 @@ import java.awt.event.WindowEvent;
  */
 public class MainMenu extends JPanel {
     public JPanel menuPanel;
+    private JPanel helpPane;
     private JButton playButton;
     private JButton highScoreButton;
     private JButton quitButton;
@@ -91,7 +92,13 @@ public class MainMenu extends JPanel {
     public MainMenu(final JFrame frame, final JPanel screens, UIController uiCntrl, GameEngine engine, HighScoreManager highScoreCntrl,
                     IconManager iconMngr, final MusicController musicCntrl) {
         // TODO We need to write a launcher class that contains all the controllers and the UI classes.
+        this.setLayout(new OverlayLayout(this));
         $$$setupUI$$$();
+
+        helpPane = new HelpPane().helpPanel;
+        //this.add(helpPane);
+        this.add(menuPanel);
+
         playButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {

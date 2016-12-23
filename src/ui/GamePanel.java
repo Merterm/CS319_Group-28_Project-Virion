@@ -3,6 +3,7 @@ package ui;
 import com.intellij.uiDesigner.core.GridConstraints;
 import com.intellij.uiDesigner.core.GridLayoutManager;
 import com.intellij.uiDesigner.core.Spacer;
+import gamemanagement.MusicController;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,21 +32,31 @@ public class GamePanel extends JPanel {
     private JTextPane cmText;
     private JTextPane virusCountText;
     public JPanel gamePanel;
+    private JPanel infoPane;
 
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("GamePanel");
-        frame.setContentPane(new GamePanel().gamePanel);
+        frame.setContentPane(new GamePanel(new MusicController()).gamePanel);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(1135, 710);
         frame.setVisible(true);
     }
 
-    public GamePanel() {
+    public GamePanel(final MusicController musicController) {
+        this.setLayout(new OverlayLayout(this));
+        this.setSize(1135, 710);
         $$$setupUI$$$();
+
+        infoPane = new InfoPane().infoPanel;
+        this.add(infoPane);
+        this.add(gamePanel);
+        this.setOpaque(false);
+
         musicButton.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
+                musicController.toggleMusic();
                 super.mouseClicked(e);
             }
         });

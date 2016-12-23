@@ -32,6 +32,19 @@ public class GameEngine
 
     //methods
 
+    public void start() {
+        initialize();
+        gameLoop();
+    }
+
+    private void initialize() {
+
+    }
+
+    private void gameLoop() {
+
+    }
+
     /**
      *
      */
