@@ -25,6 +25,8 @@ public class GameEngine
     private int cmCount=10000;
     private int atpCount=1000;
     private boolean paused;
+    private boolean preInfection=false;
+    private boolean postInfection=false;
 
     protected int viralDNACapacity = 100;   //for now 100
 
@@ -126,7 +128,12 @@ public class GameEngine
             }
         }
         //will be changed according to the stage of infection
+
         result= 5*result2 - result1;
+        if(preInfection==true)
+            result= 75*result2 - result1;
+        if(postInfection==true)
+            result = 20*result2-result1;
         return result;
 
     }
