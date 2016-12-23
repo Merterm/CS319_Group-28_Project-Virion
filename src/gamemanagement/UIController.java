@@ -46,7 +46,7 @@ public class UIController
 
     public void pause()
     {
-        //...set bool
+        //paused = true;
     }
 
     public void changePosition()
