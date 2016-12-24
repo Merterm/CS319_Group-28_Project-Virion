@@ -5,7 +5,7 @@ import gamecomponents.GameObject;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN on 5.12.2016.
+ * Author: Irmak Yılmaz on 5.12.2016.
  * Version: 1.2
  * Description: This class is the abstract class for all virus
  *              types. It contains viralDNA as a property. It
