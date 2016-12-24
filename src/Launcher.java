@@ -78,21 +78,7 @@ public class Launcher {
         virionFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         virionFrame.setSize(1135, 710);
         virionFrame.setVisible(true);
-        Protein protein = new Protein() {
-            @Override
-            public int getIconID() {
-                return 0;
-            }
 
-            @Override
-            public void setIconID(int iconID) {
-
-            }
-
-        };
-
-        protein.setIconID(23);
-        protein.setProteinTypeCoefficient(1);
 
         Cell cell = new Cell();
         cell.setIconID(41);
