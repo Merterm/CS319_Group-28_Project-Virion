@@ -118,7 +118,7 @@ public class UIController
             }
         });
         gameComponentUI.add(temp);
-        gamePanel.add(temp, new Integer(2));
+        gamePanel.add(temp, new Integer(0)); //Try 0, 1 and 2
 
     }
 

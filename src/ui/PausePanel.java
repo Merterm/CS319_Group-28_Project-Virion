@@ -85,6 +85,7 @@ public class PausePanel extends JPanel {
     private void $$$setupUI$$$() {
         createUIComponents();
         pausePanel.setLayout(new GridLayoutManager(5, 7, new Insets(0, 0, 0, 0), -1, -1));
+        pausePanel.setOpaque(false);
         final Spacer spacer1 = new Spacer();
         pausePanel.add(spacer1, new GridConstraints(0, 2, 1, 4, GridConstraints.ANCHOR_CENTER, GridConstraints.FILL_HORIZONTAL, GridConstraints.SIZEPOLICY_WANT_GROW, 1, null, null, null, 0, false));
         final Spacer spacer2 = new Spacer();
