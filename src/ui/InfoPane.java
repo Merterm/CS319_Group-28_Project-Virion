@@ -46,7 +46,6 @@ public class InfoPane extends Pane {
     }
 
     public InfoPane() {
-        this.setOpaque(false);
         $$$setupUI$$$();
     }
 
@@ -59,6 +58,8 @@ public class InfoPane extends Pane {
                 g.drawImage(new ImageIcon("resources/ViewInfoScreen-Background.png").getImage(), 0, 0, this);
             }
         };
+        infoPanel.setSize(283, 710);
+        infoPanel.setPreferredSize(new Dimension(283, 710));
     }
 
     /**
@@ -71,6 +72,7 @@ public class InfoPane extends Pane {
     private void $$$setupUI$$$() {
         createUIComponents();
         infoPanel.setLayout(new GridLayoutManager(4, 23, new Insets(0, 0, 0, 0), -1, -1));
+        infoPanel.setOpaque(false);
         infoTextPane = new JTextPane();
         infoTextPane.setBackground(new Color(-1));
         infoTextPane.setEditable(false);

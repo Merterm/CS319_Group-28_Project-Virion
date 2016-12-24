@@ -5,7 +5,9 @@
     <constraints>
       <xy x="20" y="20" width="641" height="1095"/>
     </constraints>
-    <properties/>
+    <properties>
+      <opaque value="false"/>
+    </properties>
     <border type="none"/>
     <children>
       <component id="d59a2" class="javax.swing.JTextPane" binding="infoTextPane">

@@ -37,13 +37,13 @@ public class Launcher {
         MusicController musicController = new MusicController();
 
         screens = new JPanel(new CardLayout());
-        JPanel gamePanel = new GamePanel(musicController, screens) {
+        JPanel gamePanel = new GamePanel(musicController, screens); /*{
             @Override
             public boolean isOptimizedDrawingEnabled() {
                 return false;
             }
-        }; //Need to always add the inner panel
-        UIController uiController = new UIController(gamePanel);
+        }; //Need to always add the inner panel*/
+        UIController uiController = new UIController(((GamePanel) gamePanel).getGameComponentPane());
 
         VirusController virusController = new VirusController();
 
@@ -58,7 +58,7 @@ public class Launcher {
         JPanel mainMenuScreen = new MainMenu(virionFrame, screens, uiController, gameEngine, highScoreManager, iconManager, musicController);
         JPanel helpPanel1 = new HelpPane(screens).helpPanel;
         JPanel helpPanel2 = new HelpPane(screens).helpPanel;
-        JPanel infoPane = new InfoPane();
+        JPanel infoPane = new InfoPane().infoPanel;
         JPanel pausePanel = new PausePanel(virionFrame, screens).pausePanel;
         JPanel highScorePanel = new HighScorePanel(screens, highScoreManager).highScorePanel;
         //This is the important part. In order to switch between different screens CardLayout is used.

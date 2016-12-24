@@ -20,8 +20,8 @@ public class UIController
     //*************************************************
     //  Class Variables
     //*************************************************
-    private ArrayList<Component> gameComponentUI;
-    private JPanel gamePanel;
+    private ArrayList<JPanel> gameComponentUI;
+    private JLayeredPane gamePanel;
 
     //*************************************************
     //  Constructors
@@ -29,8 +29,8 @@ public class UIController
     /**
      * Default constructor
      */
-    public UIController(JPanel gamePanel) {
-        gameComponentUI = new ArrayList<Component>();
+    public UIController(JLayeredPane gamePanel) {
+        gameComponentUI = new ArrayList<JPanel>();
         this.gamePanel = gamePanel;
     }
 
@@ -42,7 +42,7 @@ public class UIController
      * @param iconID
      */
     public void createComponent(final int iconID, int positionX, int positionY) {
-        Component temp = new Component() {
+        JPanel temp = new JPanel() {
             @Override
             public void paint(Graphics g) {
                 super.paint(g);
@@ -109,6 +109,7 @@ public class UIController
 
         temp.setBounds(new Rectangle(new Point(positionX, positionY), temp.getPreferredSize()));
         temp.setVisible(true);
+        temp.setOpaque(false);
         temp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
@@ -117,7 +118,8 @@ public class UIController
             }
         });
         gameComponentUI.add(temp);
-        gamePanel.add(temp);
+        gamePanel.add(temp, new Integer(2));
+
     }
 
     /**
