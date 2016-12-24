@@ -79,58 +79,6 @@ public class Launcher {
         virionFrame.setSize(1135, 710);
         virionFrame.setVisible(true);
 
-
-
-
-        Virus polyhedralVirus = new Virus() {
-            @Override
-            public int getVirusTypeCoefficient() {
-                return 0;
-            }
-
-            @Override
-            public void setVirusTypeCoefficient(int virusTypeCoefficient) {
-
-            }
-
-            @Override
-            public int getIconID() {
-                return 0;
-            }
-
-            @Override
-            public void setIconID(int iconID) {
-
-            }
-        };
-        polyhedralVirus.setVirusTypeCoefficient(4);
-        polyhedralVirus.setIconID(13);
-
-        Virus helicalVirus = new Virus() {
-            @Override
-            public int getVirusTypeCoefficient() {
-                return 0;
-            }
-
-            @Override
-            public void setVirusTypeCoefficient(int virusTypeCoefficient) {
-
-            }
-
-            @Override
-            public int getIconID() {
-                return 0;
-            }
-
-            @Override
-            public void setIconID(int iconID) {
-
-            }
-        };
-        helicalVirus.setVirusTypeCoefficient(2);
-        helicalVirus.setIconID(14);
-
-
     }
 
     private void changeScreen(String screenName) {
