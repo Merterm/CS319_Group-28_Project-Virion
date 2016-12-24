@@ -40,6 +40,7 @@ public class GameEngine
     static final long updatePeriod = 1000000000L/updatesPerSecond;
     private boolean preInfection=false;
     private boolean postInfection=false;
+    private UIController uiController;
 
     protected int viralDNACapacity = 100;   //for now 100
 
@@ -82,7 +83,15 @@ public class GameEngine
     /**
      *
      */
+    public GameEngine(UIController uiController) {
+        this.uiController = uiController;
+    }
+
+    /**
+     *
+     */
     public GameEngine() {
+
     }
 
     //*************************************************
@@ -119,8 +128,11 @@ public class GameEngine
         Complex complex1 = new Complex();
         Complex complex2 = new Complex();
 
-        //UIController.createComponent(id);
-        //UIController
+        uiController.createComponent(41, 350, 10);
+        uiController.createComponent(31, 350, 20);
+        uiController.createComponent(32, 360, 30);
+        uiController.createComponent(33, 350, 100);
+
 
     }
 

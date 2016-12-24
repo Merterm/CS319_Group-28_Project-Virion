@@ -8,4 +8,19 @@ package gamemanagement;
  * Description:
  */
 public class MovementController {
+    public void updateAllPositions() {
+
+    }
+
+    public void detach(int id) {
+
+    }
+
+    public boolean isOnBoundary(int id1, int id2) {
+        return false;
+    }
+
+    public void setPosition(int id) {
+
+    }
 }

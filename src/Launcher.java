@@ -29,7 +29,7 @@ public class Launcher {
         // -----------
         // Controllers
         // -----------
-        GameEngine gameEngine = new GameEngine();
+
         CellController cellController = new CellController();
         HighScoreManager highScoreManager = new HighScoreManager();
         IconManager iconManager = new IconManager();
@@ -44,7 +44,7 @@ public class Launcher {
             }
         }; //Need to always add the inner panel*/
         UIController uiController = new UIController(((GamePanel) gamePanel).getGameComponentPane());
-
+        GameEngine gameEngine = new GameEngine(uiController);
         VirusController virusController = new VirusController();
 
         // -----

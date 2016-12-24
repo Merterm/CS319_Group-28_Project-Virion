@@ -53,7 +53,7 @@ public class GamePanel extends JPanel {
         this.setSize(1135, 710);
         $$$setupUI$$$();
 
-        infoPane = new InfoPane().infoPanel;
+        infoPane = new InfoPane().getInfoPanel();
         //this.add(infoPane);
         //this.add(gamePanel);
         gameComponentPane = new JLayeredPane();

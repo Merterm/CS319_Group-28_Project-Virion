@@ -89,13 +89,13 @@ public class MainMenu extends JPanel {
      * @param iconMngr:       can be used while getting icons, //TODO
      * @param musicCntrl:     will be used if the user toggles the music.
      */
-    public MainMenu(final JFrame frame, final JPanel screens, UIController uiCntrl, GameEngine engine, HighScoreManager highScoreCntrl,
+    public MainMenu(final JFrame frame, final JPanel screens, UIController uiCntrl, final GameEngine engine, HighScoreManager highScoreCntrl,
                     IconManager iconMngr, final MusicController musicCntrl) {
         // TODO We need to write a launcher class that contains all the controllers and the UI classes.
         this.setLayout(new OverlayLayout(this));
         $$$setupUI$$$();
 
-        helpPane = new HelpPane().helpPanel;
+        helpPane = new HelpPane().getHelpPanel();
         //this.add(helpPane);
         this.add(menuPanel);
 
@@ -104,6 +104,7 @@ public class MainMenu extends JPanel {
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
                 //TODO Call the gameEngine's start() function.
+                engine.start();
                 ((CardLayout) screens.getLayout()).show(screens, "GamePanel"); //Changes the panel in the screens
             }
         });
