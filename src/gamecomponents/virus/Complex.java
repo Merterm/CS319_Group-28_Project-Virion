@@ -1,5 +1,8 @@
 package gamecomponents.virus;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
@@ -46,6 +49,13 @@ public class Complex extends Virus{
     //*************************************************
     //  Getter/Setter Methods
     //*************************************************
+    public ArrayList<Integer>  getPosition()
+    {
+        ArrayList<Integer> list  = new ArrayList<>();
+        list.add(0, this.positionX);
+        list.add(1,this.positionY);
+        return list;
+    }
     @Override
     public int getIconID() {
         return iconID;
