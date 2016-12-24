@@ -1,6 +1,7 @@
 package gamemanagement;
 
 import gamecomponents.Cell;
+import gamecomponents.CellWall;
 import gamecomponents.GameObject;
 import gamecomponents.organelle.*;
 import gamecomponents.protein.Protein;
@@ -12,6 +13,7 @@ import gamecomponents.virus.Virus;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.time.Instant;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Timer;
@@ -43,7 +45,9 @@ public class GameEngine
 
     private static Vector<GameObject> ObjectList = new Vector<GameObject>(2,2);
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
+
+        CellController cellController = new CellController();
 
         ViralDNAAttacker p1 = new ViralDNAAttacker(3,4);
         ViralDNAAttacker p2 = new ViralDNAAttacker(4,6);
@@ -60,7 +64,10 @@ public class GameEngine
         ObjectList.add(protein);
         ObjectList.add(cell);
 
-        CellController cellController = new CellController();
+
+        CellWall cellWall = new CellWall(10, Instant.now(),10);
+        Thread.sleep(11000);
+        System.out.println(cellController.isCellWallActive(cellWall));
         cellController.attackVirus(ObjectList,v);
         System.out.println(p1.getPositionX()+" "+ p1.getPositionY());
         System.out.println(p2.getPositionX()+" "+ p2.getPositionY());
