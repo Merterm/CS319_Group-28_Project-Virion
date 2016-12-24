@@ -1,8 +1,7 @@
 package gamemanagement;
 
 
-import java.io.File;
-import java.io.FileNotFoundException;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,7 +19,7 @@ public class HighScoreManager {
         boolean result = false;
         ArrayList <Integer> list = this.readHighScoreList();
         for(int i : list){
-            if(i<score)
+            if(i<=score)
                 result=true;
             else
                 result = false;
@@ -30,14 +29,22 @@ public class HighScoreManager {
 
     public void updateHighScoreList(int score, ArrayList<String> credentials){
         credentials.add("" + score);
+        try{
+            PrintWriter writer = new PrintWriter(new FileWriter("resources/highscorelist.txt", true));
+
+            writer.println("\n"+score);
+            writer.close();
+        } catch (IOException e) {
+            // do something
+        }
     }
 
     public ArrayList readHighScoreList() throws FileNotFoundException {
-        ArrayList <String> list = new ArrayList<String>();
+        ArrayList <Integer> list = new ArrayList<Integer>();
 
         Scanner scanner = new Scanner(new File("resources/highscorelist.txt"));
-        while(scanner.hasNext()){
-            list.add(scanner.next());
+        while(scanner.hasNextInt()){
+            list.add(scanner.nextInt());
         }
         return list;
     }

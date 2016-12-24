@@ -1,7 +1,6 @@
 package gamemanagement;
 
 import gamecomponents.Cell;
-import gamecomponents.CellWall;
 import gamecomponents.GameObject;
 import gamecomponents.organelle.*;
 import gamecomponents.protein.Protein;
@@ -11,7 +10,8 @@ import gamecomponents.virus.Polyhedral;
 import gamecomponents.virus.ViralDNA;
 import gamecomponents.virus.Virus;
 
-import java.time.Instant;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Timer;
@@ -43,20 +43,11 @@ public class GameEngine
 
     private static Vector<GameObject> ObjectList = new Vector<GameObject>(2,2);
 
-    /**
-     *
-     * @param args
-     * @throws InterruptedException
-     */
-    public static void main(String[] args) throws InterruptedException {
-
-        CellController cellController = new CellController();
+    public static void main(String[] args) throws IOException {
 
         ViralDNAAttacker p1 = new ViralDNAAttacker(3,4);
         ViralDNAAttacker p2 = new ViralDNAAttacker(4,6);
         ViralDNA v = new ViralDNA(1,1,false,1,3,14);
-
-
         ObjectList.add(p1);
         ObjectList.add(p2);
         ObjectList.add(v);
@@ -69,13 +60,15 @@ public class GameEngine
         ObjectList.add(protein);
         ObjectList.add(cell);
 
-        CellWall cellWall = new CellWall(10,Instant.now(),10);
-        Thread.sleep(11000);
-        System.out.println(cellController.isCellWallActive(cellWall));
+        CellController cellController = new CellController();
         cellController.attackVirus(ObjectList,v);
         System.out.println(p1.getPositionX()+" "+ p1.getPositionY());
         System.out.println(p2.getPositionX()+" "+ p2.getPositionY());
-
+        //highscoremanager testing
+        HighScoreManager highScoreManager = new HighScoreManager();
+        ArrayList <Integer> newHighList = highScoreManager.readHighScoreList();
+        highScoreManager.updateHighScoreList(404,highScoreManager.readHighScoreList());
+        System.out.println(highScoreManager.isHighScore(404));
 
     }
 

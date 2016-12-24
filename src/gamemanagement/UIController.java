@@ -113,7 +113,7 @@ public class UIController
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
-                System.out.println("Clicked");
+                System.out.println("Clicked"); //TODO Write cases here and pop up dialog boxes.
             }
         });
         gameComponentUI.add(temp);

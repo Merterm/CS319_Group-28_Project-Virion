@@ -49,20 +49,27 @@ public class GamePanel extends JPanel {
     }
 
     public GamePanel(final MusicController musicController, final JPanel screens) {
-        /*gameComponentPane = new JLayeredPane();
-        gameComponentPane.add(infoPane, 0); //TODO Think about these JlayeredPanes
-        gameComponentPane.add(gamePanel, 1);
-        gameComponentPane.setLayer(infoPane, 1);
-        gameComponentPane.setLayer(gamePanel, 0); */
         this.setLayout(new OverlayLayout(this));
         this.setSize(1135, 710);
         $$$setupUI$$$();
 
         infoPane = new InfoPane().infoPanel;
         //this.add(infoPane);
-        //this.add(gamePanel);
-        //this.add(gameComponentPane);
-        //gameComponentPane.setOpaque(false);
+        this.add(gamePanel);
+        /*gameComponentPane = new JLayeredPane();
+        gameComponentPane.setLayout(new OverlayLayout(gameComponentPane));
+        gameComponentPane.setPreferredSize(new Dimension(1135, 710));
+        gameComponentPane.add(infoPane, new Integer(0), 0); //TODO Think about these JlayeredPanes
+        gameComponentPane.add(gamePanel, new Integer(1), 1);
+        gameComponentPane.setLayer(infoPane, 1);
+        gameComponentPane.setLayer(gamePanel, 0);
+
+        //infoPane.setOpaque(true);
+
+        gameComponentPane.setVisible(true);
+
+        this.add(gameComponentPane);
+        gameComponentPane.setOpaque(false);*/
         gamePanel.setOpaque(false);
         this.setOpaque(false);
 
@@ -77,6 +84,7 @@ public class GamePanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                System.out.println(screens);
                 ((CardLayout) screens.getLayout()).show(screens, "PausePanel"); //Changes the panel in the screens
             }
         });
@@ -84,6 +92,7 @@ public class GamePanel extends JPanel {
             @Override
             public void mouseClicked(MouseEvent e) {
                 super.mouseClicked(e);
+                System.out.println(screens);
                 ((CardLayout) screens.getLayout()).show(screens, "HelpPanel2"); //Changes the panel in the screens
             }
         });
