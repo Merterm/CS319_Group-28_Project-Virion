@@ -1,3 +1,6 @@
+import gamecomponents.Cell;
+import gamecomponents.protein.Protein;
+import gamecomponents.virus.Virus;
 import gamemanagement.*;
 import ui.*;
 
@@ -74,6 +77,7 @@ public class Launcher {
         virionFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         virionFrame.setSize(1135, 710);
         virionFrame.setVisible(true);
+
     }
 
     private void changeScreen(String screenName) {

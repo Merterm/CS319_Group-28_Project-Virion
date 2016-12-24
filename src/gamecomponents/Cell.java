@@ -1,5 +1,5 @@
 /**
- * Created by irmak.yilmaz-ug on 06.12.2016. Cell class
+ * Created by Irmak Yılmaz on 06.12.2016. Cell class
  */
 package gamecomponents;
 public class Cell extends GameObject{
@@ -12,6 +12,13 @@ public class Cell extends GameObject{
         this.virusCapacity = virusCapacity;
         this.virusCount = virusCount;
     }
+
+    public Cell() {
+        this.virusCapacity=0;
+        this.virusCount=0;
+    }
+
+
     //getter and setters
     public int getVirusCapacity() {
         return virusCapacity;

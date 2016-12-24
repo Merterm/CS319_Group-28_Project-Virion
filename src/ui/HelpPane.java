@@ -11,7 +11,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 /**
- * Created by Ulugbek on 12/14/2016.
+ * Author by Ulugbek, Mert on 12/14/2016.
  */
 public class HelpPane extends Pane {
     private JTextPane helpTextPane;

@@ -15,7 +15,7 @@ public class Complex extends Virus{
     //*************************************************
     //  Class Attributes
     //*************************************************
-    private int iconID;
+    private int iconID, positionX, positionY;
     private int virusTypeCoefficient;
 
     //*************************************************
@@ -26,8 +26,10 @@ public class Complex extends Virus{
      * @param iconID
      * @param virusTypeCoefficient
      */
-    public Complex(int id, int iconID, int virusTypeCoefficient) {
+    public Complex(int positionX, int positionY,int id, int iconID, int virusTypeCoefficient) {
         super(id);
+        this.positionX = positionX;
+        this.positionY = positionY;
         this.iconID = iconID;
         this.virusTypeCoefficient = virusTypeCoefficient;
     }

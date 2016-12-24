@@ -10,7 +10,7 @@ import javax.swing.*;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Ulugbek
+ * Author: Mert
  * Version: 1.0
  * Description: methods of this class control the UI components
  * ...

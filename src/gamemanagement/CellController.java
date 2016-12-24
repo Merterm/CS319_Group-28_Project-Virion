@@ -22,6 +22,10 @@ public class CellController
 {
     private int viralDNACapacity = 0;
 
+    public CellController()
+    {
+
+    }
     /**
      *
      * @param currentCapacity
@@ -52,6 +56,11 @@ public class CellController
         return active;
     }
 
+    /**
+     *
+     * @param proteinType
+     * @return
+     */
     public int calculateRequiredCM(Protein proteinType)
     {
         int extraCm = 1000*proteinType.getProteinTypeCoefficient();
@@ -73,24 +82,23 @@ public class CellController
         //todo to be implemented
     }
 
-    public void attackVirus(Vector<Protein> proteins, int viralID)
+    /**
+     *
+     * @param objects
+     * @param v
+     */
+    public void attackVirus(Vector<GameObject> objects, ViralDNA v)
     {
-        //todo when the list of objects in GameEngine is available
-        /*
-        ViralDNA toBeAttacked = viralDNAList.get(viralID);
-        int x = toBeAttacked.getPositionX();
-        int y = toBeAttacked.getPositionY();
-        Iterator i = proteins.iterator();
-        while(i.hasNext())
+        int x = v.getPositionX();
+        int y = v.getPositionY();
+
+        for (int i= 0; i < objects.size(); i++)
         {
-            Protein p = (Protein) i.next();
-            p.goToPostion(x,y);
-        }*/
+            if(objects.get(i)instanceof Protein)
+            {
+                objects.get(i).goToPosition(x,y);
+            }
+        }
     }
-    /*
-    public void getMegaOut(id)
-    public void randomizeDNALocation()
-    public void checkRibosomes() //full or not
-    public boolean isAntibodyPresent() */
 
 }
