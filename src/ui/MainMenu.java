@@ -95,7 +95,7 @@ public class MainMenu extends JPanel {
         this.setLayout(new OverlayLayout(this));
         $$$setupUI$$$();
 
-        helpPane = new HelpPane().helpPanel;
+        //helpPane = new HelpPane().helpPanel;
         //this.add(helpPane);
         this.add(menuPanel);
 

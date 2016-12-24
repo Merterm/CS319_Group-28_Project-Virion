@@ -16,6 +16,9 @@ import java.util.Vector;
  */
 public class VirusController
 {
+
+    public VirusController(){}
+
     /**
      *
      * @param virus
@@ -55,7 +58,8 @@ public class VirusController
         {
             if( (objects.get(i) instanceof Virus) && (objects.get(i).getID() == id) )
             {
-                list  = objects.get(i).getPosition();
+                Virus v = (Virus)objects.get(i);
+                list  = v.getPosition();
             }
         }
         return list;

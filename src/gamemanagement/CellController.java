@@ -8,7 +8,6 @@ import gamecomponents.virus.ViralDNA;
 
 import java.time.Duration;
 import java.time.Instant;
-import java.util.Iterator;
 import java.util.Vector;
 
 /**

@@ -52,12 +52,18 @@ public class GameEngine
         ViralDNAAttacker p1 = new ViralDNAAttacker(3,4);
         ViralDNAAttacker p2 = new ViralDNAAttacker(4,6);
         ViralDNA v = new ViralDNA(1,1,false,1,3,14);
+        Complex complex = new Complex(5,5,33,22,4);
         ObjectList.add(p1);
         ObjectList.add(p2);
         ObjectList.add(v);
+        ObjectList.add(complex);
 
+            /* testing getVirusPosition() */
+        VirusController virusController = new VirusController();
+        ArrayList<Integer> virusPosition = virusController.getVirusPosition(33,ObjectList);
+        System.out.println(virusPosition.get(0) +" "+ virusPosition.get(1) );
 
-            /* testing isCellWallActive */
+            /* testing isCellWallActive() */
         CellWall cellWall = new CellWall(10, Instant.now(),10);
         Thread.sleep(11000);
         System.out.println(cellController.isCellWallActive(cellWall));
