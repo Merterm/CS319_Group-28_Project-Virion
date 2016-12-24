@@ -11,14 +11,24 @@ import gamecomponents.GameObject;
  */
 public class ViralDNA extends GameObject {
     protected boolean isInside = false;
-    protected int speed, lifetime, virusTypeCoefficient;
+    protected int speed, lifetime, virusTypeCoefficient, positionX, positionY;
 
-    public ViralDNA(boolean isInside, int speed, int lifetime, int virusTypeCoefficient)
+    public ViralDNA(int x, int y, boolean isInside, int speed, int lifetime, int virusTypeCoefficient)
     {
+        this.positionX = x;
+        this.positionY =y;
         this.isInside = isInside;
         this.speed = speed;
         this.lifetime = lifetime;
         this.virusTypeCoefficient = virusTypeCoefficient;
+    }
+    public int getPositionX()
+    {
+        return positionX;
+    }
+    public int getPositionY()
+    {
+        return positionY;
     }
 
     public int getVirusTypeCoefficient()

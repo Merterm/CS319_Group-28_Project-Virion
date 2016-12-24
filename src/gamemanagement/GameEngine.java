@@ -44,15 +44,15 @@ public class GameEngine
 
         ViralDNAAttacker p1 = new ViralDNAAttacker(3,4);
         ViralDNAAttacker p2 = new ViralDNAAttacker(4,6);
-        Complex virus = new Complex(1,1,3,14,5);
+        ViralDNA v = new ViralDNA(1,1,false,1,3,14);
         ObjectList.add(p1);
         ObjectList.add(p2);
-        ObjectList.add(virus);
+        ObjectList.add(v);
 
         CellController cellController = new CellController();
-        cellController.attackVirus(ObjectList,3);
-        System.out.print(p1.getPositionX()+" "+ p1.getPositionY());
-        System.out.print(p2.getPositionX()+" "+ p2.getPositionY());
+        cellController.attackVirus(ObjectList,v);
+        System.out.println(p1.getPositionX()+" "+ p1.getPositionY());
+        System.out.println(p2.getPositionX()+" "+ p2.getPositionY());
     }
 
 

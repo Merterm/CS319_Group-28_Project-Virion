@@ -77,17 +77,24 @@ public class CellController
         //todo to be implemented
     }
 
-    public void attackVirus(Vector<GameObject> objects, int viralID)
+    public void attackVirus(Vector<GameObject> objects, ViralDNA v)
     {
-        int x =0,y=0;
+        //int[] pos = new int[2];
+
+        //ViralDNA v = (ViralDNA)objects.get(2);
+        int x = v.getPositionX();
+        int y = v.getPositionY();
+        objects.get(0).goToPosition(x,y);
+        objects.get(1).goToPosition(x,y);
+        /*
         Iterator i = objects.iterator();
         while(i.hasNext())
         {
             if(i.next()instanceof ViralDNA)
             {
                 ViralDNA toBeAttacked = (ViralDNA)i.next();
-                x = toBeAttacked.getPosition().get(0);
-                y = toBeAttacked.getPosition().get(1);
+                pos[0] = toBeAttacked.getPosition().get(0);
+                pos[1]= toBeAttacked.getPosition().get(1);
             }
 
         }
@@ -97,9 +104,10 @@ public class CellController
             if(j.next()instanceof Protein)
             {
                 Protein p = (Protein) j.next();
-                p.goToPosition(x,y);
+                p.goToPosition(pos[0],pos[1]);
             }
         }
+        */
     }
     /*
     public void getMegaOut(id)
