@@ -10,6 +10,8 @@ import gamecomponents.virus.Polyhedral;
 import gamecomponents.virus.ViralDNA;
 import gamecomponents.virus.Virus;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Timer;
@@ -41,7 +43,7 @@ public class GameEngine
 
     private static Vector<GameObject> ObjectList = new Vector<GameObject>(2,2);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         ViralDNAAttacker p1 = new ViralDNAAttacker(3,4);
         ViralDNAAttacker p2 = new ViralDNAAttacker(4,6);
@@ -62,6 +64,11 @@ public class GameEngine
         cellController.attackVirus(ObjectList,v);
         System.out.println(p1.getPositionX()+" "+ p1.getPositionY());
         System.out.println(p2.getPositionX()+" "+ p2.getPositionY());
+        //highscoremanager testing
+        HighScoreManager highScoreManager = new HighScoreManager();
+        ArrayList <Integer> newHighList = highScoreManager.readHighScoreList();
+        highScoreManager.updateHighScoreList(404,highScoreManager.readHighScoreList());
+        System.out.println(highScoreManager.isHighScore(404));
 
     }
 
