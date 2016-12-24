@@ -80,34 +80,7 @@ public class Launcher {
         virionFrame.setVisible(true);
 
 
-        Cell cell = new Cell();
-        cell.setIconID(41);
-        cell.setVirusCapacity(100);
-        cell.setVirusCount(0);
 
-        Virus complexVirus = new Virus() {
-            @Override
-            public int getVirusTypeCoefficient() {
-                return 0;
-            }
-
-            @Override
-            public void setVirusTypeCoefficient(int virusTypeCoefficient) {
-
-            }
-
-            @Override
-            public int getIconID() {
-                return 0;
-            }
-
-            @Override
-            public void setIconID(int iconID) {
-
-            }
-        };
-        complexVirus.setIconID(12);
-        complexVirus.setVirusTypeCoefficient(1);
 
         Virus polyhedralVirus = new Virus() {
             @Override

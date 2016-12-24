@@ -6,6 +6,7 @@ import gamecomponents.organelle.*;
 import gamecomponents.protein.Protein;
 import gamecomponents.protein.ViralDNAAttacker;
 import gamecomponents.virus.Complex;
+import gamecomponents.virus.Polyhedral;
 import gamecomponents.virus.ViralDNA;
 import gamecomponents.virus.Virus;
 
@@ -44,19 +45,22 @@ public class GameEngine
 
         ViralDNAAttacker p1 = new ViralDNAAttacker(3,4);
         ViralDNAAttacker p2 = new ViralDNAAttacker(4,6);
-        Complex virus = new Complex(1,1,3,14,5);
-        gamecomponents.organelle.Protein protein = new gamecomponents.organelle.Protein(0,0,1);
-        protein.setIconID(23);
-
+        ViralDNA v = new ViralDNA(1,1,false,1,3,14);
         ObjectList.add(p1);
         ObjectList.add(p2);
-        ObjectList.add(virus);
+        ObjectList.add(v);
+        gamecomponents.organelle.Protein protein = new gamecomponents.organelle.Protein(0,0,1);
+        protein.setIconID(23);
+        Cell cell = new Cell(100,0);
+        cell.setIconID(41);
         ObjectList.add(protein);
+        ObjectList.add(cell);
 
         CellController cellController = new CellController();
-        cellController.attackVirus(ObjectList,3);
+        cellController.attackVirus(ObjectList,v);
         System.out.print(p1.getPositionX()+" "+ p1.getPositionY());
         System.out.print(p2.getPositionX()+" "+ p2.getPositionY());
+
     }
 
 
