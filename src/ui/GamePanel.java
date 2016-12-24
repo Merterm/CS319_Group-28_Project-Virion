@@ -32,7 +32,7 @@ public class GamePanel extends JPanel {
     private JTextPane atpText;
     private JTextPane cmText;
     private JTextPane virusCountText;
-    public JPanel gamePanel;
+    private JPanel gamePanel;
     private JPanel infoPane;
     private JLayeredPane gameComponentPane;
 
@@ -41,7 +41,7 @@ public class GamePanel extends JPanel {
         JFrame frame = new JFrame("GamePanel");
         GamePanel gamePanel = new GamePanel(new MusicController(), new JPanel());
         frame.setContentPane(gamePanel);
-        UIController uiController = new UIController(gamePanel);
+        UIController uiController = new UIController(gamePanel.getGameComponentPane());
         uiController.createComponent(41, 100, 100);
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(1135, 710);
@@ -55,12 +55,12 @@ public class GamePanel extends JPanel {
 
         infoPane = new InfoPane().infoPanel;
         //this.add(infoPane);
-        this.add(gamePanel);
-        /*gameComponentPane = new JLayeredPane();
+        //this.add(gamePanel);
+        gameComponentPane = new JLayeredPane();
         gameComponentPane.setLayout(new OverlayLayout(gameComponentPane));
         gameComponentPane.setPreferredSize(new Dimension(1135, 710));
-        gameComponentPane.add(infoPane, new Integer(0), 0); //TODO Think about these JlayeredPanes
-        gameComponentPane.add(gamePanel, new Integer(1), 1);
+        gameComponentPane.add(infoPane, new Integer(1)); //TODO Think about these JlayeredPanes
+        gameComponentPane.add(gamePanel, new Integer(0));
         gameComponentPane.setLayer(infoPane, 1);
         gameComponentPane.setLayer(gamePanel, 0);
 
@@ -69,7 +69,7 @@ public class GamePanel extends JPanel {
         gameComponentPane.setVisible(true);
 
         this.add(gameComponentPane);
-        gameComponentPane.setOpaque(false);*/
+        gameComponentPane.setOpaque(false);
         gamePanel.setOpaque(false);
         this.setOpaque(false);
 
@@ -106,6 +106,22 @@ public class GamePanel extends JPanel {
                 g.drawImage(new ImageIcon("resources/GamePlay-Background.png").getImage(), 0, 0, this);
             }
         };
+    }
+
+    public JPanel getGamePanel() {
+        return gamePanel;
+    }
+
+    public void setGamePanel(JPanel gamePanel) {
+        this.gamePanel = gamePanel;
+    }
+
+    public JLayeredPane getGameComponentPane() {
+        return gameComponentPane;
+    }
+
+    public void setGameComponentPane(JLayeredPane gameComponentPane) {
+        this.gameComponentPane = gameComponentPane;
     }
 
     /**
