@@ -28,11 +28,11 @@ public class CellWall
     private Duration duration;
 
 
-    public CellWall(int extraCM,Instant now)           /* end = now.plusSeconds(some time) */
+    public CellWall(int extraCM,Instant now, long duration)           /* end = now.plusSeconds(some time) */
     {
         extraCM = 0;
         createdTime = now;
-        duration = Duration.ofSeconds(30);
+        this.duration = Duration.ofSeconds(duration);
     }
 
     public Duration getDuration()

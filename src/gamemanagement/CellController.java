@@ -20,39 +20,65 @@ import java.util.Vector;
  */
 public class CellController
 {
-    private int viralDNACapacity = 0;
-
+    /**
+     * constructor
+     */
     public CellController()
     {
+        //...
+    }
+
+    /**
+     * needs to modified or deleted
+     * @param object
+     */
+    public void create(GameObject object)
+    {
+       object = new GameObject() {
+           @Override
+           public int getIconID() {
+               return 0;
+           }
+
+           @Override
+           public void setIconID(int iconID) {
+
+           }
+       };
 
     }
+
+
+
     /**
      *
      * @param currentCapacity
      * @return
      */
-    public boolean isViralDNACapacityReached(int currentCapacity)
+    public boolean isViralDNACapacityReached(int currentCapacity, int cellCapacity)
     {
-        if(currentCapacity == viralDNACapacity)
+        if(currentCapacity == cellCapacity)
             return true;
         return false;
     }
 
     /**
-     *
+     * returns true if cellWall is active and false otherwise
      * @param cw
      * @return
      */
     public boolean isCellWallActive(CellWall cw)
     {
         Duration duration = cw.getDuration();
+        boolean active = true;
 
         Instant createdTime = cw.getCreatedTime();
         Instant currentTime = Instant.now();
         Duration duration2 = Duration.between(createdTime, currentTime);
 
-        boolean active = duration.equals(duration2);
 
+        if(duration2.getSeconds() >= duration.getSeconds())
+            active = false;
         return active;
     }
 
@@ -67,20 +93,7 @@ public class CellController
         return extraCm;
     }
 
-    public void create(GameObject object)
-    {
-       //object = new GameObject();
-    }
 
-    public  void  stopReconstruction()
-    {
-        //todo to be implemented
-    }
-
-    public void sendFinder(int id)
-    {
-        //todo to be implemented
-    }
 
     /**
      *
