@@ -5,14 +5,27 @@ import gamecomponents.GameObject;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN on 5.12.2016.
+ * Author: Ulugbek
  * Version: 1.0
  * Description:
  */
 public class ViralDNA extends GameObject {
+
+    /**
+     * attributes
+     */
     protected boolean isInside = false;
     protected int speed, lifetime, virusTypeCoefficient, positionX, positionY;
 
+    /**
+     * Constructor
+     * @param x
+     * @param y
+     * @param isInside
+     * @param speed
+     * @param lifetime
+     * @param virusTypeCoefficient
+     */
     public ViralDNA(int x, int y, boolean isInside, int speed, int lifetime, int virusTypeCoefficient)
     {
         this.positionX = x;
@@ -22,13 +35,28 @@ public class ViralDNA extends GameObject {
         this.lifetime = lifetime;
         this.virusTypeCoefficient = virusTypeCoefficient;
     }
+
+    /**
+     * getters and setter
+     * @return
+     */
     public int getPositionX()
     {
         return positionX;
     }
+    public void setPositionX(int x)
+    {
+        this.positionX = x;
+    }
+
     public int getPositionY()
     {
         return positionY;
+    }
+
+    public void setPositionY(int y)
+    {
+        this.positionX = y;
     }
 
     public int getVirusTypeCoefficient()

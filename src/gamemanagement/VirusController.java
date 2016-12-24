@@ -1,55 +1,64 @@
 package gamemanagement;
 
-import gamecomponents.virus.Complex;
+import gamecomponents.GameObject;
 import gamecomponents.virus.ViralDNA;
 import gamecomponents.virus.Virus;
+
+import java.util.ArrayList;
+import java.util.Vector;
 
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN on 5.12.2016.
+ * Author: Ulugbek Irmatov
  * Version: 1.0
  * Description:
  */
 public class VirusController
 {
+    /**
+     *
+     * @param virus
+     * @param postion
+     */
     public void createViralDNA(Virus virus, int[] postion)
     {
         ViralDNA viralDNA = virus.getViralDNA();
 
-        //viralDNA.setPositionX(postion[0]);
-        //viralDNA.setPositionY(postion[1]);
+        viralDNA.setPositionX(postion[0]);
+        viralDNA.setPositionY(postion[1]);
 
         virus.destroy();
-
     }
 
-    public int calculateVirusFrequency(int time)
+    /**
+     *
+     * @param t
+     * @return
+     */
+    public int calculateVirusFrequency(int t)
     {
-        //currently have no idea
-        return 1;
+        int frequency = 16*t^2+t+16;
+        return frequency;
     }
 
-    public Virus calculateVirusType()
+    /**
+     *
+     * @param id
+     * @param objects
+     * @return
+     */
+    public  ArrayList<Integer> getVirusPosition(int id, Vector<GameObject> objects)
     {
-        //don't know about this either
-        Virus v = new Complex();
-        return  v;
-    }
-
-    public int[] getVirusPosition(int id)
-    {
-        //Virus v = virusList.get(id);        /* here's sth is wrong, doesn't recognize virusList */
-        int[] list = new int[2];
-        //list[0] = v.getPositionX();
-        //list[1] = v.getPositionY();
+        ArrayList<Integer> list = new ArrayList<>(1);
+        for(int i = 0; i < objects.size() ; i++)
+        {
+            if( (objects.get(i) instanceof Virus) && (objects.get(i).getID() == id) )
+            {
+                list  = objects.get(i).getPosition();
+            }
+        }
         return list;
     }
-
-    public boolean areAllDNAsFound()
-    {
-        return true;    //for now ;)
-    }
-
 
 }
