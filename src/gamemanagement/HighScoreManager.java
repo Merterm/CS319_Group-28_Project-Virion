@@ -13,13 +13,16 @@ import java.util.Scanner;
  * Description:
  */
 public class HighScoreManager {
-    private ArrayList<Integer> credentials;
+    private ArrayList<String> credentials;
+
+    public HighScoreManager() {
+        credentials = new ArrayList<String>();
+    }
 
     public boolean isHighScore(int score) throws FileNotFoundException {
         boolean result = false;
-        ArrayList <Integer> list = this.readHighScoreList();
-        for(int i : list){
-            if(i<=score)
+        for(String i : credentials){
+            if(i.compareTo("" + score) <= 0)
                 result=true;
             else
                 result = false;
@@ -40,11 +43,11 @@ public class HighScoreManager {
     }
 
     public ArrayList readHighScoreList() throws FileNotFoundException {
-        ArrayList <Integer> list = new ArrayList<Integer>();
+        ArrayList <String> list = new ArrayList<String>();
 
         Scanner scanner = new Scanner(new File("resources/highscorelist.txt"));
-        while(scanner.hasNextInt()){
-            list.add(scanner.nextInt());
+        while(scanner.hasNext()){
+            list.add(scanner.next());
         }
         return list;
     }
