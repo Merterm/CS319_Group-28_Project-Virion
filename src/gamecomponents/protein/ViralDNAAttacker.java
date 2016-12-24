@@ -11,10 +11,20 @@ import gamecomponents.virus.ViralDNA;
  */
 public class ViralDNAAttacker extends Protein
 {
-    private int iconID;
-    public ViralDNAAttacker()
-    {
 
+    private int iconID, positionX,positionY;
+    public ViralDNAAttacker(int x, int y)
+    {
+        positionX = x;
+        positionY = y;
+    }
+    public int getPositionX()
+    {
+        return positionX;
+    }
+    public int getPositionY()
+    {
+        return positionY;
     }
     public void setIconID(int id)
     {

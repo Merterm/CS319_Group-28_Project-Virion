@@ -14,7 +14,7 @@ public abstract class Protein extends GameObject
 {
     //Lifetime is missing!
     //Attributes
-    private int extraCM = 0;
+    private int extraCM = 0, positionX, positionY;
     private int proteinTypeCoefficient = 0;
 
     public void setProteinTypeCoefficient(int proteinTypeCoefficient) {
@@ -32,5 +32,10 @@ public abstract class Protein extends GameObject
 
     public void setExtraCM(int extraCM) {
         this.extraCM = extraCM;
+    }
+
+    public void goToPosition(int positionX, int positionY) {
+        this.positionX = positionX;
+        this.positionY = positionY; //TODO call UI controller's changePosition method
     }
 }

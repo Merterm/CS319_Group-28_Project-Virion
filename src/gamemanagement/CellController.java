@@ -22,6 +22,10 @@ public class CellController
 {
     private int viralDNACapacity = 0;
 
+    public CellController()
+    {
+
+    }
     /**
      *
      * @param currentCapacity
@@ -73,19 +77,29 @@ public class CellController
         //todo to be implemented
     }
 
-    public void attackVirus(Vector<Protein> proteins, int viralID)
+    public void attackVirus(Vector<GameObject> objects, int viralID)
     {
-        //todo when the list of objects in GameEngine is available
-        /*
-        ViralDNA toBeAttacked = viralDNAList.get(viralID);
-        int x = toBeAttacked.getPositionX();
-        int y = toBeAttacked.getPositionY();
-        Iterator i = proteins.iterator();
+        int x =0,y=0;
+        Iterator i = objects.iterator();
         while(i.hasNext())
         {
-            Protein p = (Protein) i.next();
-            p.goToPostion(x,y);
-        }*/
+            if(i.next()instanceof ViralDNA)
+            {
+                ViralDNA toBeAttacked = (ViralDNA)i.next();
+                x = toBeAttacked.getPosition().get(0);
+                y = toBeAttacked.getPosition().get(1);
+            }
+
+        }
+        Iterator j = objects.iterator();
+        while(j.hasNext())
+        {
+            if(j.next()instanceof Protein)
+            {
+                Protein p = (Protein) j.next();
+                p.goToPosition(x,y);
+            }
+        }
     }
     /*
     public void getMegaOut(id)

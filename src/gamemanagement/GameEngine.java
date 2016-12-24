@@ -4,6 +4,7 @@ import gamecomponents.Cell;
 import gamecomponents.GameObject;
 import gamecomponents.organelle.*;
 import gamecomponents.protein.Protein;
+import gamecomponents.protein.ViralDNAAttacker;
 import gamecomponents.virus.Complex;
 import gamecomponents.virus.ViralDNA;
 import gamecomponents.virus.Virus;
@@ -37,7 +38,23 @@ public class GameEngine
 
     protected int viralDNACapacity = 100;   //for now 100
 
-    private Vector<GameObject> ObjectList = new Vector<GameObject>(2,2);
+    private static Vector<GameObject> ObjectList = new Vector<GameObject>(2,2);
+
+    public static void main(String[] args) {
+
+        ViralDNAAttacker p1 = new ViralDNAAttacker(3,4);
+        ViralDNAAttacker p2 = new ViralDNAAttacker(4,6);
+        Complex virus = new Complex(1,1,3,14,5);
+        ObjectList.add(p1);
+        ObjectList.add(p2);
+        ObjectList.add(virus);
+
+        CellController cellController = new CellController();
+        cellController.attackVirus(ObjectList,3);
+        System.out.print(p1.getPositionX()+" "+ p1.getPositionY());
+        System.out.print(p2.getPositionX()+" "+ p2.getPositionY());
+    }
+
 
     //*************************************************
     //  Constructors
