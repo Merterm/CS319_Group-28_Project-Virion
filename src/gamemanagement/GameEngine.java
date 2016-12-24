@@ -56,22 +56,18 @@ public class GameEngine
         ObjectList.add(p2);
         ObjectList.add(v);
 
-        gamecomponents.organelle.Protein protein = new gamecomponents.organelle.Protein(0,0,1);
-        protein.setIconID(23);
-        Cell cell = new Cell(100,0);
-        cell.setIconID(41);
 
-        ObjectList.add(protein);
-        ObjectList.add(cell);
-
-
+            /* testing isCellWallActive */
         CellWall cellWall = new CellWall(10, Instant.now(),10);
         Thread.sleep(11000);
         System.out.println(cellController.isCellWallActive(cellWall));
+
+            /* testing attackVirus() */
         cellController.attackVirus(ObjectList,v);
         System.out.println(p1.getPositionX()+" "+ p1.getPositionY());
         System.out.println(p2.getPositionX()+" "+ p2.getPositionY());
-        //highscoremanager testing
+
+            /* highscoremanager testing */
         HighScoreManager highScoreManager = new HighScoreManager();
         ArrayList <Integer> newHighList = highScoreManager.readHighScoreList();
         highScoreManager.updateHighScoreList(404,highScoreManager.readHighScoreList());
