@@ -109,6 +109,13 @@ public class UIController
 
         temp.setBounds(new Rectangle(new Point(positionX, positionY), temp.getPreferredSize()));
         temp.setVisible(true);
+        temp.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                super.mouseClicked(e);
+                System.out.println("Clicked");
+            }
+        });
         gameComponentUI.add(temp);
         gamePanel.add(temp);
     }
