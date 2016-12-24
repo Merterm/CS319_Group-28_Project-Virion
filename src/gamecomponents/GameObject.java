@@ -5,7 +5,7 @@ import java.util.ArrayList;
 /**
  * CS319: Object-Oriented Software Engineering Course Project
  * Project Virion
- * Author: Mert İNAN on 5.12.2016.
+ * Author: Mert İNAN & Irmak Yılmaz on 5.12.2016.
  * Version: 1.1
  * Description: This is the most important object in the game
  *              components package, as it is the core parent

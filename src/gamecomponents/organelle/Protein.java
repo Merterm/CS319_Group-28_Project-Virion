@@ -47,4 +47,5 @@ public class Protein extends GameObject {
     public void setCoefficient(int coefficient) {
         this.coefficient = coefficient;
     }
+
 }

@@ -1,3 +1,6 @@
+import gamecomponents.Cell;
+import gamecomponents.protein.Protein;
+import gamecomponents.virus.Virus;
 import gamemanagement.*;
 import ui.*;
 
@@ -75,6 +78,100 @@ public class Launcher {
         virionFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         virionFrame.setSize(1135, 710);
         virionFrame.setVisible(true);
+        Protein protein = new Protein() {
+            @Override
+            public int getIconID() {
+                return 0;
+            }
+
+            @Override
+            public void setIconID(int iconID) {
+
+            }
+
+        };
+
+        protein.setIconID(23);
+        protein.setProteinTypeCoefficient(1);
+
+        Cell cell = new Cell();
+        cell.setIconID(41);
+        cell.setVirusCapacity(100);
+        cell.setVirusCount(0);
+
+        Virus complexVirus = new Virus() {
+            @Override
+            public int getVirusTypeCoefficient() {
+                return 0;
+            }
+
+            @Override
+            public void setVirusTypeCoefficient(int virusTypeCoefficient) {
+
+            }
+
+            @Override
+            public int getIconID() {
+                return 0;
+            }
+
+            @Override
+            public void setIconID(int iconID) {
+
+            }
+        };
+        complexVirus.setIconID(12);
+        complexVirus.setVirusTypeCoefficient(1);
+
+        Virus polyhedralVirus = new Virus() {
+            @Override
+            public int getVirusTypeCoefficient() {
+                return 0;
+            }
+
+            @Override
+            public void setVirusTypeCoefficient(int virusTypeCoefficient) {
+
+            }
+
+            @Override
+            public int getIconID() {
+                return 0;
+            }
+
+            @Override
+            public void setIconID(int iconID) {
+
+            }
+        };
+        polyhedralVirus.setVirusTypeCoefficient(4);
+        polyhedralVirus.setIconID(13);
+
+        Virus helicalVirus = new Virus() {
+            @Override
+            public int getVirusTypeCoefficient() {
+                return 0;
+            }
+
+            @Override
+            public void setVirusTypeCoefficient(int virusTypeCoefficient) {
+
+            }
+
+            @Override
+            public int getIconID() {
+                return 0;
+            }
+
+            @Override
+            public void setIconID(int iconID) {
+
+            }
+        };
+        helicalVirus.setVirusTypeCoefficient(2);
+        helicalVirus.setIconID(14);
+
+
     }
 
     private void changeScreen(String screenName) {
