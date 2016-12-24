@@ -33,6 +33,7 @@ public class Launcher {
         MovementController movementController = new MovementController();
         MusicController musicController = new MusicController();
 
+        screens = new JPanel(new CardLayout());
         JPanel gamePanel = new GamePanel(musicController, screens) {
             @Override
             public boolean isOptimizedDrawingEnabled() {
@@ -51,9 +52,7 @@ public class Launcher {
         // ------
         // Panels
         // ------
-        screens = new JPanel(new CardLayout());
         JPanel mainMenuScreen = new MainMenu(virionFrame, screens, uiController, gameEngine, highScoreManager, iconManager, musicController);
-
         JPanel helpPanel1 = new HelpPane(screens).helpPanel;
         JPanel helpPanel2 = new HelpPane(screens).helpPanel;
         JPanel infoPane = new InfoPane();
