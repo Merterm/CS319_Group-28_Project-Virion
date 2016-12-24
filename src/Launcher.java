@@ -56,11 +56,11 @@ public class Launcher {
         // Panels
         // ------
         JPanel mainMenuScreen = new MainMenu(virionFrame, screens, uiController, gameEngine, highScoreManager, iconManager, musicController);
-        JPanel helpPanel1 = new HelpPane(screens).helpPanel;
-        JPanel helpPanel2 = new HelpPane(screens).helpPanel;
-        JPanel infoPane = new InfoPane().infoPanel;
-        JPanel pausePanel = new PausePanel(virionFrame, screens).pausePanel;
-        JPanel highScorePanel = new HighScorePanel(screens, highScoreManager).highScorePanel;
+        JPanel helpPanel1 = new HelpPane(screens).getHelpPanel();
+        JPanel helpPanel2 = new HelpPane(screens).getHelpPanel();
+        JPanel infoPane = new InfoPane().getInfoPanel();
+        JPanel pausePanel = new PausePanel(virionFrame, screens).getPausePanel();
+        JPanel highScorePanel = new HighScorePanel(screens, highScoreManager).getHighScorePanel();
         //This is the important part. In order to switch between different screens CardLayout is used.
 
         screens.add(mainMenuScreen, "MainMenu");

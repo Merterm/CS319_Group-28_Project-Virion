@@ -15,7 +15,7 @@ import java.awt.event.MouseEvent;
 
 public class InfoPane extends Pane {
     private JTextPane infoTextPane;
-    public JPanel infoPanel;
+    private JPanel infoPanel;
     private JButton button2;
     private JTextPane infoTitle;
 
@@ -60,6 +60,14 @@ public class InfoPane extends Pane {
         };
         infoPanel.setSize(283, 710);
         infoPanel.setPreferredSize(new Dimension(283, 710));
+    }
+
+    public JPanel getInfoPanel() {
+        return infoPanel;
+    }
+
+    public void setInfoPanel(JPanel infoPanel) {
+        this.infoPanel = infoPanel;
     }
 
     /**

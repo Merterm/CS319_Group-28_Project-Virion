@@ -19,7 +19,7 @@ import java.io.FileNotFoundException;
  * Description:
  */
 public class HighScorePanel {
-    public JPanel highScorePanel;
+    private JPanel highScorePanel;
     private JTextPane titlePane;
     private JTextPane scoresPane;
     private JButton backButton;
@@ -58,6 +58,14 @@ public class HighScorePanel {
                 g.drawImage(new ImageIcon("resources/HighScore-Background.png").getImage(), 0, 0, this);
             }
         };
+    }
+
+    public JPanel getHighScorePanel() {
+        return highScorePanel;
+    }
+
+    public void setHighScorePanel(JPanel highScorePanel) {
+        this.highScorePanel = highScorePanel;
     }
 
     /**

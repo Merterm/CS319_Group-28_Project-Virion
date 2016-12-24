@@ -15,7 +15,7 @@ import java.awt.event.MouseEvent;
  */
 public class HelpPane extends Pane {
     private JTextPane helpTextPane;
-    public JPanel helpPanel;
+    private JPanel helpPanel;
     private JButton backButton;
     private JTextPane helpInfo;
 
@@ -50,6 +50,14 @@ public class HelpPane extends Pane {
                 g.drawImage(new ImageIcon("resources/HighScore-Background.png").getImage(), 0, 0, this);
             }
         };
+    }
+
+    public JPanel getHelpPanel() {
+        return helpPanel;
+    }
+
+    public void setHelpPanel(JPanel helpPanel) {
+        this.helpPanel = helpPanel;
     }
 
     /**

@@ -21,7 +21,7 @@ public class PausePanel extends JPanel {
     private JButton resumeButton;
     private JButton helpButton;
     private JButton quitButton;
-    public JPanel pausePanel;
+    private JPanel pausePanel;
 
     public PausePanel(final JFrame frame, final JPanel screens) {
         $$$setupUI$$$();
@@ -65,6 +65,14 @@ public class PausePanel extends JPanel {
                 g.drawImage(new ImageIcon("resources/Pause-Background.png").getImage(), 0, 0, this);
             }
         };
+    }
+
+    public JPanel getPausePanel() {
+        return pausePanel;
+    }
+
+    public void setPausePanel(JPanel pausePanel) {
+        this.pausePanel = pausePanel;
     }
 
     /**
